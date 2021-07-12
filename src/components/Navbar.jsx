@@ -6,11 +6,11 @@ export default function Navbar(props) {
     const loggedIn = (
         <>
         <Link to="/profile">           
-            Profile
+            |  Profile  | 
         </Link>
 
         <Link to="/">
-            <span onClick={props.handleLogout}>Logout! </span>
+            <span onClick={props.handleLogout}>|  Logout! </span>
         </Link>
     </>
     )
@@ -18,18 +18,18 @@ export default function Navbar(props) {
     const loggedOut = (
         <>
              <Link to="/login">
-                Login
+                |  Login  |
             </Link>
 
             <Link to="/register">
-                New Account!
+                |  New Account!
             </Link>
         </>
     )
     return(
         <nav>
             <Link to="/">
-                Home
+                Home  |
             </Link>
 
             {props.currentUser ? loggedIn : loggedOut}
