@@ -36,7 +36,7 @@ export default function Login(props) {
       // set the user in App.js's state
       props.setCurrentUser(decoded)
     } catch (err) {
-      if(err.response.status == 400) {
+      if(err.response.status === 400) {
         setMessage(err.response.data.msg)
       } else  {
         console.dir(err)
