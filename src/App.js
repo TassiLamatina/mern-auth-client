@@ -57,7 +57,7 @@ function App() {
         <Switch>
           <Route 
             exact path="/"
-            component={Welcome}
+            render={ props => <Welcome {...props} currentUser={ currentUser } setCurrentUser={ setCurrentUser }/> }
           />
 
           <Route 
