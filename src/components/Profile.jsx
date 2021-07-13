@@ -4,6 +4,9 @@ import axios from "axios"
 import Login from "./Login"
 import JobList from './JobList'
 
+// bring in mock job data -- to be replaced with db later
+import jobData from '../jobData'
+
 export default function Profile(props) {
     // state is information from the server
     const [message, setMessage] = useState('')
@@ -43,7 +46,7 @@ export default function Profile(props) {
 
                 <p>{message}</p>
             </div>
-            < JobList />
+            <JobList jobData={jobData} />
         </div>
     )
 }
