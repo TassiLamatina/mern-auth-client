@@ -35,3 +35,17 @@ input.sign-in-submit {
     margin-top: 130px;
   } 
 }
+
+.navbar {
+  padding-left:30px;
+  padding-right:30px;
+  margin-left:10px;
+  margin-right:10px;
+  background-color: #128494;
+  color: #ffffff;
+
+}
+.color-nav{
+  background-color: #128494;
+  color: #ffffff;
+}
