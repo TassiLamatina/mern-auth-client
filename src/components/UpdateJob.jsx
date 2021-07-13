@@ -43,29 +43,29 @@ export default function UpdateJob(props) {
                 <Form.Label>Job Description</Form.Label>
                 <Form.Control as="textarea" rows={3} />
             </Form.Group>
-            <FormGroup>
+            <Form.Group>
                 <ControlLabel>Date:</ControlLabel>
                 <DatePicker id="example-datepicker" value={this.state.value} onChange={this.handleChange} />
-                </FormGroup>
+            </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Priority:</Form.Label>
                 <Form.Control as="select">
-                <option>Top Priority</option>
-                <option>Interested</option>
-                <option>It's Okay</option>
-                <option>Interested</option>
+                    <option>Top Priority</option>
+                    <option>Interested</option>
+                    <option>It's Okay</option>
+                    <option>Interested</option>
                 </Form.Control>
-                <Form.Group controlId="exampleForm.ControlSelect1">
+            </Form.Group>
+            <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Status:</Form.Label>
                 <Form.Control as="select">
-                <option>Applied</option>
-                <option>Interviewed</option>
-                <option>Yes</option>
-                <option>No</option>
+                    <option>Applied</option>
+                    <option>Interviewed</option>
+                    <option>Yes</option>
+                    <option>No</option>
                 </Form.Control>
                 <Button variant="secondary">Update Card</Button>
             </Form.Group>
-  
         </Form>
     )
 }
