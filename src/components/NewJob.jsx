@@ -54,9 +54,9 @@ export default function NewJob(props) {
                 <Form.Label>Status:</Form.Label>
                 <Form.Control as="select">
                     <option>Applied</option>
+                    <option>To Apply</option>
                     <option>Interviewed</option>
-                    <option>Yes</option>
-                    <option>No</option>
+                    <option>rejected</option>
                 </Form.Control>
                 <Button variant="secondary">Update Card</Button>
             </Form.Group>
