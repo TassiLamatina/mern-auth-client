@@ -47,6 +47,7 @@ export default function Profile(props) {
                 <p>{message}</p>
             </div>
             <JobList jobData={jobData} />
+
         </div>
     )
 }
