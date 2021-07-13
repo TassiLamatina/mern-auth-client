@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import{ Navbar }from 'react-bootstrap'
 
 
 // require("react-bootstrap/lib/NavbarHeader")
@@ -32,7 +33,7 @@ export default function NewNavbar(props) {
             <Navbar.Collapse className="justify-content-end">                  
             <Navbar.Text pullRight>
             <img src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png"/>
-            Hi  {props.currentUser ? props.currentUser.name : ""} !
+            <alt>Hi  {props.currentUser ? props.currentUser.name : ""} !</alt>
             {console.log(props.currentUser)}
             </Navbar.Text>
             </Navbar.Collapse>
