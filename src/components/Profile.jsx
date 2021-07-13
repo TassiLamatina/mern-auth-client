@@ -3,6 +3,11 @@ import { Redirect } from "react-router-dom"
 import axios from "axios"
 import Login from "./Login"
 import JobList from './JobList'
+import Menubar from './Menubar'
+import JobDetail from "./JobDetail"
+import NewJob from './NewJob'
+import UpdateJob from './UpdateJob'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // bring in mock job data -- to be replaced with db later
 import jobData from '../jobData'
@@ -10,6 +15,10 @@ import jobData from '../jobData'
 export default function Profile(props) {
     // state is information from the server
     const [message, setMessage] = useState('')
+    const [filter,setFilter] = useState('applied')
+    const [jobList,setjobList] = useState(jobData)
+    const [selected,setSelected] = useState(null)
+    const [action,setAction] = useState('view')
 
     // hit the auth locked route on the backend
     useEffect(() => {
@@ -34,19 +43,58 @@ export default function Profile(props) {
             }
         }
         getPrivateMessage()
+
     }, [props])
     // redirect if there is no user in state
     if(!props.currentUser) return <Redirect to='/login' component={ Login } currentUser={ props.currentUser } />
-    return(
-        <div>
-            <h4>greetings {props.currentUser.name} 👋</h4>
-            <h5> your email is {props.currentUser.email}</h5>
-            <div>
-                <p>you have a secret message from the suthorized user area:</p>
 
-                <p>{message}</p>
-            </div>
-            <JobList jobData={jobData} />
-        </div>
+    // handlers and utils
+
+    const handleMenuClick = (filter) => {
+        // filter list of jobs by status
+        setFilter(filter)
+        setAction('view')
+        console.log(`TODO: filter by status: ${filter}`)
+    }
+
+    const handleJobCardClick = (id) => {
+        setAction('view')
+        setSelected(id)
+    }
+
+    const showNewJobForm = () => {
+        setAction('create')
+        setSelected(null)
+    }
+
+    // display pane logic 
+
+    let selectedJobPane
+
+    if(selected) {
+        if(action === 'view'){
+            selectedJobPane = <JobDetail job={ jobList.find( job => job.id === selected) }/>
+        } else if(action === 'update') {
+            selectedJobPane = <UpdateJob job={ jobList.find( job => job.id === selected) } />
+        }
+    } else {
+        selectedJobPane = <NewJob />
+    }
+    
+    return(
+        <Container>
+            <Row>
+                <Col>
+                <Button onClick={ showNewJobForm }>Create New Card</Button>
+                    <Menubar handleMenuClick={ handleMenuClick } />
+                </Col>
+                <Col>
+                    <JobList jobData={jobList} handleJobCardClick= { handleJobCardClick }/>
+                </Col>
+                <Col>
+                    {selectedJobPane}
+                </Col>
+            </Row>
+        </Container>
     )
 }
