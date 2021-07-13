@@ -56,9 +56,11 @@ export default function Welcome(props) {
 
     return(
         <div className="container-fluid"> 
-            <div className="row vh-100">
-                <div className="col-xs-12 col-md-8 pb-5-xs splash text-center">
-                    <img className="img-fluid" src="https://placedog.net/600/600" alt="" />
+            <div className="row" style={{height: "900px"}}>
+                <div className="col-xs-12 col-md-8 pb-5-xs splash text-center" style={ { backgroundImage: "url(/splash.jpg)",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain'    
+                }}>
                 </div>
                 <div className="col-xs-12 col-md-4 form">
                     <form onSubmit={handleSubmit} id="sign-in">

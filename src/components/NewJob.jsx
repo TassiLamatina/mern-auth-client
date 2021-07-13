@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Redirect } from "react-router-dom"
-import { DatePicker } from "react-bootstrap-date-picker"
 import axios from "axios"
 import Login from "./Login"
+
 
 export default function NewJob(props) {
     

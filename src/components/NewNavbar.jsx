@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import{ Navbar }from 'react-bootstrap'
+
 
 // require("react-bootstrap/lib/NavbarHeader")
 
@@ -20,10 +20,10 @@ export default function NewNavbar(props) {
                 <span onClick={props.handleLogout}>  Logout! </span>
             </Link>
             <Link to="/profile">           
-                  Profile  
+                Profile  
             </Link>
             <Link to="/login">
-                  Login  
+                Login  
             </Link>
 
             <Link to="/register">
