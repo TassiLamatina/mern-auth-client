@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Redirect } from "react-router-dom"
 import axios from "axios"
 import Login from "./Login"
+import JobList from './JobList'
 
 export default function Profile(props) {
     // state is information from the server
@@ -42,6 +43,7 @@ export default function Profile(props) {
 
                 <p>{message}</p>
             </div>
+            < JobList />
         </div>
     )
 }
