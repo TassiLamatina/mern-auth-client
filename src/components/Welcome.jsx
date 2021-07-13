@@ -18,7 +18,7 @@ export default function Welcome() {
                     </form>
                     <div className="account text-center">
                     <p>Don't have an account?</p>
-                    <button type="button" className="create-acc">Create Acccount</button>
+                        <button type="button" className="create-acc">Create Acccount Test</button>
                     </div>
                 </div>
             </div>
