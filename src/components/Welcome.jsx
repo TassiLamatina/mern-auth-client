@@ -6,15 +6,15 @@ export default function Welcome() {
                 </div>
                 <div className="col-md-3">
                 <form id="sign-up" method="POST" action="/user">
-                    <div class="mb-3">
-                    <label class="form-label">Username:</label>
-                    <input class="form-control" type="text" name="username"/>
+                    <div className="mb-3">
+                    <label className="form-label">Username:</label>
+                    <input className="form-control" type="text" name="username"/>
                     </div>
-                    <div class="mb-4">
-                    <label class="form-label">Zipcode:</label>
-                    <input class="form-control" type="number" name="zipcode"/>
+                    <div className="mb-4">
+                    <label className="form-label">Zipcode:</label>
+                    <input className="form-control" type="number" name="zipcode"/>
                     </div>
-                    <input class="btn" type="submit" />
+                    <input className="btn" type="submit" />
                 </form>
             </div>
         </div>
