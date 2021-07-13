@@ -82,6 +82,19 @@ export default function Profile(props) {
     }
     
     return(
+
+        <div>
+            <h4>greetings {props.currentUser.name} 👋</h4>
+            <h5> your email is {props.currentUser.email}</h5>
+            <div>
+                <p>you have a secret message from the suthorized user area:</p>
+
+                <p>{message}</p>
+            </div>
+            <JobList jobData={jobData} />
+
+        </div>
+
         <Container>
             <Row>
                 <Col>
@@ -96,5 +109,6 @@ export default function Profile(props) {
                 </Col>
             </Row>
         </Container>
+ main
     )
 }

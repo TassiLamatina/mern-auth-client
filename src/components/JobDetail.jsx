@@ -1,23 +1,28 @@
-const Job = (props) => {
-    // console.log(props)
-    // const renderedJobs = props.jobs.map(job => {
-    //     return(
-    //         <li key={`${job.id}`}>
-    //             <Link to={`${props.match.url}/member/${person.id}`}>{person.name}</Link>
-    //         </li>
-    //     )
-    // })
+
+// test data -- to be replaced with passed props.job
+const test =
+    {
+        id: 1,
+        title: 'ceo',
+        salary: '1000000',
+        priority: 'high'
+    }
+
+
+const JobDetail = () => {
+    console.log(test.title)
 
     return(
-        <div>
+        <div className='border'>
             <div className='header'>
-                <h2>{props.title}</h2>
+                <h2>Selected Job Position: {test.title}</h2>
             </div>
             <div className='desc'>
-                {props.salary}
-                {props.priority}
+                ${test.salary}
+                <br></br>
+                Priority: {test.priority}
             </div>
         </div>
     )
 }
-export default Job
+export default JobDetail

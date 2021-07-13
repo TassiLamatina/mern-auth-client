@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import JobDetail from './JobDetail'
 
 const JobList = (props) => {
     // console.log(props)
@@ -19,6 +20,7 @@ const JobList = (props) => {
             <ul className='list'>
                 {renderedJobs}
             </ul>
+            <JobDetail />
         </div>
     )
 }
