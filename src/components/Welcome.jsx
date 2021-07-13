@@ -1,7 +1,7 @@
 import Profile from './Profile.jsx'
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 
 import {
@@ -74,7 +74,9 @@ export default function Welcome(props) {
                     <p>{message} </p>
                     <div className="account text-center">
                         <p>Don't have an account?</p>
-                        <button type="button" className="create-acc">Create Account</button>
+                        <Link to="/register">
+                            <button type="button" className="create-acc">Create Account</button>
+                        </Link>
                     </div>
                 </div>
             </div>
