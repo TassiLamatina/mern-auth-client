@@ -1,9 +1,32 @@
 import { useEffect, useState } from "react"
 import { Redirect } from "react-router-dom"
+<<<<<<< HEAD
 import { Form, Button } from "react-bootstrap"
 import axios from "axios"
 import Login from "./Login"
 
+=======
+import axios from "axios"
+import Login from "./Login"
+
+
+export default function NewJob(props) {
+    
+    // FROM REACT-BOOTSTRAP CALENDAR DOCUMENT:
+
+    // handleChange: function(value, formattedValue) {
+    //     this.setState({
+    //       value: value, 
+    //       formattedValue: formattedValue 
+    //     });
+    //   },
+    //   componentDidUpdate: function(){
+    //     // Access ISO String and formatted values from the DOM.
+    //     const hiddenInputElement = document.getElementById("example-datepicker");
+    //     console.log(hiddenInputElement.value); // ISO String, ex: "2016-11-19T12:00:00.000Z"
+    //     console.log(hiddenInputElement.getAttribute('data-formattedvalue')) // Formatted String, ex: "11/19/2016"
+    //   },
+>>>>>>> bdbcc2c86fd4d67bb5ae1f38f32e2d14fa894ad4
 
 export default function NewJob(props) {
 
@@ -32,12 +55,19 @@ export default function NewJob(props) {
                 <Form.Label>Job Description</Form.Label>
                 <Form.Control as="textarea" rows={3} />
             </Form.Group>
+<<<<<<< HEAD
 
             <label for="start">Start date:</label>
             <input type="date" id="start" name="trip-start"
                 value="2018-07-22"
                 min="2018-01-01" max="2018-12-31"/>         
             
+=======
+            <Form.Group>
+                <ControlLabel>Date:</ControlLabel>
+                <DatePicker id="example-datepicker" value={this.state.value} onChange={this.handleChange} />
+            </Form.Group>
+>>>>>>> bdbcc2c86fd4d67bb5ae1f38f32e2d14fa894ad4
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Priority:</Form.Label>
                 <Form.Control as="select">
@@ -47,7 +77,10 @@ export default function NewJob(props) {
                     <option>Interested</option>
                 </Form.Control>
             </Form.Group>
+<<<<<<< HEAD
 
+=======
+>>>>>>> bdbcc2c86fd4d67bb5ae1f38f32e2d14fa894ad4
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Status:</Form.Label>
                 <Form.Control as="select">
@@ -58,8 +91,12 @@ export default function NewJob(props) {
                 </Form.Control>
                 <Button variant="secondary">Update Card</Button>
             </Form.Group>
+<<<<<<< HEAD
             
         
         </div>
+=======
+        </Form>
+>>>>>>> bdbcc2c86fd4d67bb5ae1f38f32e2d14fa894ad4
     )
 }
