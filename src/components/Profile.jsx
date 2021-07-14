@@ -16,7 +16,7 @@ export default function Profile(props) {
     // state is information from the server
     const [message, setMessage] = useState('')
     const [filter,setFilter] = useState('applied')
-    const [jobList,setjobList] = useState(jobData)
+    const [jobList,setJobList] = useState(jobData)
     const [selected,setSelected] = useState(null)
     const [action,setAction] = useState('view')
 
@@ -52,9 +52,14 @@ export default function Profile(props) {
 
     const handleMenuClick = (filter) => {
         // filter list of jobs by status
+        
+        setAction('create')
+        setSelected(null)
+
         setFilter(filter)
         setAction('view')
-        console.log(`TODO: filter by status: ${filter}`)
+        let filteredJobs = jobData.filter(job => job.status === filter)
+        setJobList(filteredJobs)
     }
 
     const handleJobCardClick = (id) => {
