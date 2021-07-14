@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #ECFEFF;
 }
 
 #sign-in {
@@ -66,7 +67,7 @@ input#account-register:hover {
   padding-left:30px;
   padding-right:30px;
   padding-bottom: 1px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   background-color: #128494;
   color: #ffffff;
   font-size: 15px;
@@ -92,3 +93,42 @@ input#account-register:hover {
   font-size: 64px;
   font-family: 'Poppins', sans-serif;
 } 
+
+#calendar {
+  font-weight: bold;
+}
+
+#createbtn {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #8AC76D;
+  border-color: #8AC76D;
+  color: #000;
+  /* margin-left: 33px;  */
+}
+
+#menubar {
+background-color: #128494;
+height: 100vh;
+margin-top: 30px;
+margin-left: -200px;
+padding-left: -50px;
+text-align: right;
+
+}
+
+#menubar a:active {
+  background-color: #00B7C2;
+}
+
+#profileBody {
+  margin-top: 82px;
+}
+
+#row {
+  flex-grow: 1;
+  justify-content: center;
+}
