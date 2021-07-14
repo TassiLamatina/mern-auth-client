@@ -31,12 +31,16 @@ input.sign-in-submit {
 .navbar {
   padding-left:30px;
   padding-right:30px;
+  padding-bottom: 1px;
   margin-left:10px;
   margin-right:10px;
+  margin-bottom: 100px;
   background-color: #128494;
   color: #ffffff;
+  font-size: 15px;
 
 }
+<<<<<<< HEAD
 .navbar-custom {
   background-color: #128494;
   color: #ffffff;
@@ -50,3 +54,11 @@ input.sign-in-submit {
     background-size: cover !important;
   }
 }
+=======
+
+#clambr {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  } 
+>>>>>>> 35cb01110f8c594da12012ec3597258091ad0738
