@@ -73,20 +73,24 @@ input#account-register:hover {
 }
 
 .navbar {
-  margin-bottom: 120px;
+  padding: 10px 25px;
+  margin-bottom: 100px;
   background-color: #128494;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .navbar a {
-  display: block;
   color: inherit;
   text-decoration: none;
 }
+.navbar a:hover {
+  color: #000;
+}
+
 .navbar p {
-  display: inline-block;
   padding-right: 5px;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {

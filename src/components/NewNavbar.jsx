@@ -13,20 +13,17 @@ export default function NewNavbar(props) {
     const loggedIn = (
         <>
         <Navbar expand="lg">
-            <Container>
-                <Col md={10}>
-                <Navbar.Brand id="clambr">Clambr</Navbar.Brand>
-                </Col>
-                <Col md={2}>              
-                    <p>Hi {props.currentUser ? props.currentUser.name : ""} !</p>
-                    {console.log(props.currentUser)}  
-                    <img src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png" alt="person-icon"/>
-                    <Link to="/">
-                        <span onClick={props.handleLogout}>Logout</span>
-                    </Link> 
-                </Col>
-                   
-            </Container>
+            <Col md={10}>
+            <Navbar.Brand id="clambr">Clambr</Navbar.Brand>
+            </Col>
+            <Col md={2}>              
+                <p>Hi {props.currentUser ? props.currentUser.name : ""}!</p>
+                {console.log(props.currentUser)}  
+                <img src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png" alt="person-icon"/>
+                <Link to="/">
+                    <span onClick={props.handleLogout}>Logout</span>
+                </Link> 
+            </Col>
         </Navbar>  
     </>
     )
