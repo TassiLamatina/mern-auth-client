@@ -1,3 +1,11 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#sign-in {
+  width: 90%;
+  margin: 0 auto;
+}
 
 #sign-in {
   width: 90%;
@@ -7,13 +15,24 @@
 .form-label{
   font-weight: 700;
 }
+<<<<<<< HEAD
 button.create-acc {
+=======
+.account button {
+>>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
   border-radius: 58px;
   background-color: #128494; 
   border: none;
   padding: 25px 15px;
   color: #000;
   font-weight: 700;
+<<<<<<< HEAD
+=======
+}
+
+.account button:hover {
+  color: #fff
+>>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
 }
 
 input.sign-in-submit {
@@ -25,6 +44,34 @@ input.sign-in-submit {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
+=======
+input.sign-in-submit:hover {
+  color: #fff;
+}
+
+input#account-register {
+  border-radius: 60px;
+  background-color: #8AC76D;
+  padding: 8px 40px; 
+  border: none;
+  color: #000;
+}
+input#account-register:hover {
+  color: #ffffff;
+}
+
+.register-form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.register-col p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+>>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
 .navbar {
   padding-left:30px;
   padding-right:30px;
@@ -55,7 +102,10 @@ input.sign-in-submit {
   font-size: 64px;
   font-family: 'Poppins', sans-serif;
 } 
+<<<<<<< HEAD
 
   #calendar {
     font-weight: bold;
   }
+=======
+>>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e

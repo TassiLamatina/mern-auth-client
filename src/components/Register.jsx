@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import Profile from './Profile.jsx'
 
 export default function Register(props) {
@@ -54,46 +54,53 @@ if(props.currentUser) return <Redirect to='/profile' component={ Profile } curre
 
   return (
     <div>
-      <h3>Registration form:</h3>
+      <div className="container-fluid"> 
+        <div className="row" style={{height: "900px"}}>
+            <div className="col-xs-12 col-md-8 pb-5-xs splash text-center" style={ { backgroundImage: "url(/splash.jpg)",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain'    
+            }}>
+            </div>
+            <div className="col-xs-12 col-md-4 register-col">
+              <p className="pt-4 px-3">REGISTER</p>
+              <form className="text-center register-form" onSubmit={handleSubmit}>
+                <input 
+                  className="mb-3 form-control"
+                  id='name-input'
+                  type='text'
+                  placeholder='Username'
+                  onChange={e => setName(e.target.value)}
+                  value={name}
+                />
 
-      <p>{message}</p>
+                <input 
+                  className="mb-3 form-control"
+                  id='email-input'
+                  type='email'
+                  placeholder='Email'
+                  onChange={e => setEmail(e.target.value)}
+                  value={email}
+                />
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='name-input'>Name:</label>
+                <input 
+                  className="form-control"
+                  id='password-input'
+                  type='password'
+                  placeholder='Password'
+                  onChange={e => setPassword(e.target.value)}
+                  value={password}
+                /><br />
 
-        <input 
-          id='name-input'
-          type='text'
-          placeholder='enter your name user...'
-          onChange={e => setName(e.target.value)}
-          value={name}
-        />
-
-        <label htmlFor='email-input'>email:</label>
-
-        <input 
-          id='email-input'
-          type='email'
-          placeholder='enter your email user...'
-          onChange={e => setEmail(e.target.value)}
-          value={email}
-        />
-
-        <label htmlFor='password-input'>password:</label>
-
-        <input 
-          id='password-input'
-          type='password'
-          placeholder='desired password'
-          onChange={e => setPassword(e.target.value)}
-          value={password}
-        />
-
-        <input 
-          type='submit'
-          value='make new account'
-        />
-      </form>
+                <input 
+                  id='account-register'
+                  type='submit'
+                  value='REGISTER'
+                />
+              </form>
+            </div>
+        </div>
     </div>
+
+  </div>
   )
 }
