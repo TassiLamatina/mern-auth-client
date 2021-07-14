@@ -1,4 +1,13 @@
 
+nav {
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px;
+}
+#sign-in {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .form-label{
   font-weight: 700;
 }
@@ -20,12 +29,6 @@ input.sign-in-submit {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .form {
-    margin-top: 130px;
-  } 
-}
-
 .navbar {
   padding-left:30px;
   padding-right:30px;
@@ -39,8 +42,24 @@ input.sign-in-submit {
 
 }
 
+.navbar-custom {
+  background-color: #128494;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .row {
+    height: 1134px !important;
+  }
+  .splash {
+    background-size: cover !important;
+  }
+}
+
+
 #clambr {
   color: white;
   font-weight: bold;
   font-size: 25px;
   } 
+
