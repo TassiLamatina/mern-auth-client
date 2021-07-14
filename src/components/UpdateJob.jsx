@@ -13,32 +13,37 @@ export default function UpdateJob(props) {
         <div>
         
             <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Company</Form.Label>
+                {/* <Form.Label>Company</Form.Label> */}
                 <Form.Control type="company" placeholder="Company Name" />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Job Url</Form.Label>
+                {/* <Form.Label>Job Url</Form.Label> */}
                 <Form.Control type="jobUrl" placeholder="Job URL" />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Job Title</Form.Label>
+                {/* <Form.Label>Job Title</Form.Label> */}
                 <Form.Control type="jobTiltle" placeholder="Job Title" />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Job Description</Form.Label>
-                <Form.Control as="textarea" rows={3} />
+                {/* <Form.Label>Job Description</Form.Label> */}
+                <Form.Control as="textarea" rows={3} placeholder="Job Description"/>
             </Form.Group>
 
-            <label for="start">Start date:</label>
+             <Form.Group controlId="exampleForm.ControlTextarea1">
+                {/* <Form.Label>Notes</Form.Label> */}
+                <Form.Control as="textarea" rows={3} placeholder="Notes"/>
+            </Form.Group>
+
+            <label id="calendar" for="start">Start date:</label>
             <input type="date" id="start" name="trip-start"
                 value="2018-07-22"
                 min="2018-01-01" max="2018-12-31"/>         
             
             <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>Priority:</Form.Label>
+                {/* <Form.Label>Priority:</Form.Label> */}
                 <Form.Control as="select">
                     <option>Top Priority</option>
                     <option>Interested</option>
@@ -46,13 +51,14 @@ export default function UpdateJob(props) {
                     <option>Interested</option>
                 </Form.Control>
             </Form.Group>
+
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Status:</Form.Label>
                 <Form.Control as="select">
                     <option>Applied</option>
                     <option>To Apply</option>
                     <option>Interviewed</option>
-                    <option>Rejected</option>
+                    <option>rejected</option>
                 </Form.Control>
                 <Button variant="secondary">Update Card</Button>
             </Form.Group>

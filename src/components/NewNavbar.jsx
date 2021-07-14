@@ -14,9 +14,9 @@ export default function NewNavbar(props) {
         <>
         <Navbar bg="light" expand="lg">
                 <Navbar.Brand>Clambr</Navbar.Brand>
-            <Link to="/">
+            {/* <Link to="/">
                 Home  
-            </Link>   
+            </Link>    */}
             <Link to="/">
                 <span onClick={props.handleLogout}>  Logout </span>
             </Link>
