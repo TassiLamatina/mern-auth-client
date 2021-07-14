@@ -9,7 +9,6 @@ export default function NewJob(props) {
 
     // TRACKING USER 
     // redirect if there is no user in state
-    if(!props.currentUser) return <Redirect to='/login' component={ Login } currentUser={ props.currentUser } />
     return(
     <div>
         
