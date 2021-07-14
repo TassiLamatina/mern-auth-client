@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom'
 import JobDetail from './JobDetail'
 
-
-// test onClick function
-    // const clicked = () => {
-    //     console.log('you clicked a job')
-    // }
-
 const JobList = (props) => {
+
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(
             <li key={`${job.id}`}>
-                <button onClick={props.handleJobCardClick}>{job.title}</button>
+                <button onClick={() => props.handleJobCardClick(job.id)}>{job.title}</button>
             </li>
         )
     })
@@ -25,7 +20,6 @@ const JobList = (props) => {
             <ul className='list'>
                 {renderedJobs}
             </ul>
-            <JobDetail />
         </div>
     )
 }
