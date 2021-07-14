@@ -13,7 +13,7 @@ export default function NewNavbar(props) {
     const loggedIn = (
         <>
         <Navbar expand="lg">
-                <Navbar.Brand id="clambr">Clambr</Navbar.Brand>
+                <Navbar.Brand id="clambr">clambr</Navbar.Brand>
             {/* <Link to="/">
                 Home  
             </Link>    */}
