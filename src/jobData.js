@@ -2,20 +2,35 @@ const jobData = [
     {
         id: 1,
         title: 'ceo',
-        salary: '1000000',
+        company: 'Amazon',
+        jobURL: 'www.Amazon/jobs/324',
+        description: 'Body copy 18, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        notes: 'interviewer was nice and we talked about visiting the Amazon',
+        dateApplied: '3/2/2021',
         priority: 'high',
+        status: 'applied'
     },
     {
         id: 2,
-        title: 'cfo',
-        salary: '1',
-        priority: 'low',
+        title: 'barista',
+        company: 'starbucks',
+        jobURL: 'www.starbucks/jobs/32324',
+        description: 'Body copy 18, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        notes: 'We talked about my skills in css and our love for coffee',
+        dateApplied: '5/2/2021',
+        priority: 'medium',
+        status: 'interviewed'
     },
     {
         id: 3,
-        title: 'software dev',
-        salary: '100',
-        priority: 'high',
+        title: 'software engineer',
+        company: 'Microsoft',
+        jobURL: 'www.Microsoft/careers/3324',
+        description: 'Body copy 18, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        notes: 'applied with my designer resume',
+        dateApplied: '1/2/2021',
+        priority: 'low',
+        status: 'toApply'
     }
 ]
 

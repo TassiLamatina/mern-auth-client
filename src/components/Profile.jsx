@@ -85,13 +85,13 @@ export default function Profile(props) {
         <Container>
             <Row>
                 <Col>
-                <Button onClick={ showNewJobForm }>Create New Card</Button>
-                    <Menubar handleMenuClick={ handleMenuClick } />
+                <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
+                    <Menubar id="menubar" handleMenuClick={ handleMenuClick } />
                 </Col>
-                <Col>
+                <Col id="profileBody">
                     <JobList jobData={jobList} handleJobCardClick= { handleJobCardClick }/>
                 </Col>
-                <Col>
+                <Col id="profileBody">
                     {selectedJobPane}
                 </Col>
             </Row>

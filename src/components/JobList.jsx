@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import JobDetail from './JobDetail'
 
 const JobList = (props) => {
-    // console.log(props)
+
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(
             <li key={`${job.id}`}>
-                <Link to={`/job/${job.id}`}>{job.title}</Link>
+                <button onClick={() => props.handleJobCardClick(job.id)}>{job.title}</button>
             </li>
         )
     })
@@ -20,7 +20,6 @@ const JobList = (props) => {
             <ul className='list'>
                 {renderedJobs}
             </ul>
-            <JobDetail />
         </div>
     )
 }
