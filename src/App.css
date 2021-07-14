@@ -1,7 +1,4 @@
-nav {
-  font-family: 'Poppins', sans-serif;
-  font-size: 64px;
-}
+
 #sign-in {
   width: 90%;
   margin: 0 auto;
@@ -40,7 +37,6 @@ input.sign-in-submit {
   font-size: 15px;
 
 }
-<<<<<<< HEAD
 .navbar-custom {
   background-color: #128494;
   color: #ffffff;
@@ -54,11 +50,10 @@ input.sign-in-submit {
     background-size: cover !important;
   }
 }
-=======
 
 #clambr {
   color: white;
   font-weight: bold;
-  font-size: 25px;
-  } 
->>>>>>> 35cb01110f8c594da12012ec3597258091ad0738
+  font-size: 64px;
+  font-family: 'Poppins', sans-serif;
+} 
