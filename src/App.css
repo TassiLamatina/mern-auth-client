@@ -8,12 +8,12 @@
   font-weight: 700;
 }
 button.create-acc {
-   border-radius: 58px;
-   background-color: #128494; 
-   border: none;
-   padding: 25px 15px;
-   color: #000;
-   font-weight: 700;
+  border-radius: 58px;
+  background-color: #128494; 
+  border: none;
+  padding: 25px 15px;
+  color: #000;
+  font-weight: 700;
 }
 
 input.sign-in-submit {
