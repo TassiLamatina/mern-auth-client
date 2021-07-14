@@ -94,9 +94,13 @@ if(props.currentUser) return <Redirect to='/profile' component={ Profile } curre
                 <input 
                   id='account-register'
                   type='submit'
-                  value='REGISTER'
+                  value='Create Account'
                 />
               </form>
+              <Link to="/">
+                <p className="login pt-3 px-3 text-center">Or login here.</p>
+              </Link>
+             
             </div>
         </div>
     </div>
