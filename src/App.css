@@ -47,6 +47,7 @@ input#account-register {
   padding: 8px 40px; 
   border: none;
   color: #000;
+  font-weight: bold;
 }
 input#account-register:hover {
   color: #ffffff;
@@ -60,6 +61,14 @@ input#account-register:hover {
 .register-col p {
   font-size: 24px;
   font-weight: 500;
+}
+.register-col a {
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit; 
+} 
+.register-col a .login {
+  font-size: 18px;
 }
 
 .navbar {
