@@ -39,8 +39,8 @@ export default function UpdateJob(props) {
 
             <label id="calendar" for="start">Start date:</label>
             <input type="date" id="start" name="trip-start"
-                value="2018-07-22"
-                min="2018-01-01" max="2018-12-31"/>         
+                value="2021-07-15"
+                min="2018-01-01" max="2035-12-31"/>          
             
             <Form.Group controlId="exampleForm.ControlSelect1">
                 {/* <Form.Label>Priority:</Form.Label> */}
