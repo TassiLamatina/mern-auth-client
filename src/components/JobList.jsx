@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom'
 import JobDetail from './JobDetail'
 
+
+// test onClick function
+    const clicked = () => {
+        console.log('you clicked a job')
+    }
+
 const JobList = (props) => {
-    // console.log(props)
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(
             <li key={`${job.id}`}>
-                <Link to={`/job/${job.id}`}>{job.title}</Link>
+                <button onClick={clicked}>{job.title}</button>
             </li>
         )
     })
