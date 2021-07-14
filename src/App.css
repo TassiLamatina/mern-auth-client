@@ -1,3 +1,6 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 #sign-in {
   width: 90%;
@@ -7,13 +10,17 @@
 .form-label{
   font-weight: 700;
 }
-button.create-acc {
+.account button {
   border-radius: 58px;
   background-color: #128494; 
   border: none;
   padding: 25px 15px;
   color: #000;
   font-weight: 700;
+}
+
+.account button:hover {
+  color: #fff
 }
 
 input.sign-in-submit {
@@ -23,6 +30,31 @@ input.sign-in-submit {
   border: none;
   color: #000;
   font-weight: 700;
+}
+
+input.sign-in-submit:hover {
+  color: #fff;
+}
+
+input#account-register {
+  border-radius: 60px;
+  background-color: #8AC76D;
+  padding: 8px 40px; 
+  border: none;
+  color: #000;
+}
+input#account-register:hover {
+  color: #ffffff;
+}
+
+.register-form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.register-col p {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .navbar {
