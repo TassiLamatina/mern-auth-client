@@ -15,24 +15,17 @@ body {
 .form-label{
   font-weight: 700;
 }
-<<<<<<< HEAD
-button.create-acc {
-=======
 .account button {
->>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
   border-radius: 58px;
   background-color: #128494; 
   border: none;
   padding: 25px 15px;
   color: #000;
   font-weight: 700;
-<<<<<<< HEAD
-=======
 }
 
 .account button:hover {
   color: #fff
->>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
 }
 
 input.sign-in-submit {
@@ -44,8 +37,6 @@ input.sign-in-submit {
   font-weight: 700;
 }
 
-<<<<<<< HEAD
-=======
 input.sign-in-submit:hover {
   color: #fff;
 }
@@ -71,7 +62,6 @@ input#account-register:hover {
   font-weight: 500;
 }
 
->>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
 .navbar {
   padding-left:30px;
   padding-right:30px;
@@ -102,10 +92,3 @@ input#account-register:hover {
   font-size: 64px;
   font-family: 'Poppins', sans-serif;
 } 
-<<<<<<< HEAD
-
-  #calendar {
-    font-weight: bold;
-  }
-=======
->>>>>>> 4e93d3812b67bede660c0a4b1185c1c3e2f23f5e
