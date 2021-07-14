@@ -52,8 +52,6 @@ export default function NewJob(props) {
                 </Form.Control>
             </Form.Group>
 
-
-
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Status:</Form.Label>
                 <Form.Control as="select">
