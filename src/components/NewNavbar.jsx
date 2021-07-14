@@ -13,12 +13,12 @@ export default function NewNavbar(props) {
     const loggedIn = (
         <>
         <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Clambr</Navbar.Brand>
+                <Navbar.Brand>Clambr</Navbar.Brand>
             <Link to="/">
                 Home  
             </Link>   
             <Link to="/">
-                <span onClick={props.handleLogout}>  Logout! </span>
+                <span onClick={props.handleLogout}>  Logout </span>
             </Link>
             <Link to="/profile">           
                 Profile  
@@ -28,7 +28,7 @@ export default function NewNavbar(props) {
             </Link>
 
             <Link to="/register">
-                 New Account!
+                 New Account
             </Link>               
             <Navbar.Collapse className="justify-content-end">                  
             <Navbar.Text pullRight>

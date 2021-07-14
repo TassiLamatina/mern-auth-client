@@ -18,7 +18,7 @@ export default function NewJob(props) {
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>jobUrl</Form.Label>
+                <Form.Label>Job Url</Form.Label>
                 <Form.Control type="jobUrl" placeholder="Job URL" />
             </Form.Group>
 

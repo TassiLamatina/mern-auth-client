@@ -32,10 +32,13 @@ input.sign-in-submit {
 .navbar {
   padding-left:30px;
   padding-right:30px;
+  padding-bottom: 5px;
   margin-left:10px;
   margin-right:10px;
+  margin-bottom: 5px;
   background-color: #128494;
   color: #ffffff;
+  font-size: 15px;
 
 }
 .navbar-custom {
