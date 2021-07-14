@@ -12,8 +12,8 @@ export default function NewNavbar(props) {
     // if the user is logged in
     const loggedIn = (
         <>
-        <Navbar bg="light" expand="lg">
-                <Navbar.Brand>Clambr</Navbar.Brand>
+        <Navbar expand="lg">
+                <Navbar.Brand id="clambr">Clambr</Navbar.Brand>
             {/* <Link to="/">
                 Home  
             </Link>    */}
