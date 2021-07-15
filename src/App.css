@@ -1,6 +1,5 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ECFEFF;
 }
 
 #sign-in {
@@ -16,41 +15,29 @@ body {
 .form-label{
   font-weight: 700;
 }
-.account button {
-  border-radius: 58px;
-  background-color: #128494; 
-  border: none;
-  padding: 25px 15px;
-  color: #000;
-  font-weight: 700;
-}
-
-.account button:hover {
-  color: #fff
-}
 
 input.sign-in-submit {
-  border-radius: 58px;
-  background-color: #128494;
-  padding: 10px 15px; 
+  border-radius: 60px;
+  background-color: #8AC76D;
+  padding: 8px 40px; 
   border: none;
   color: #000;
-  font-weight: 700;
+  font-size: 24px;
 }
 
 input.sign-in-submit:hover {
   color: #fff;
 }
 
-input#account-register {
+#account-register {
   border-radius: 60px;
   background-color: #8AC76D;
   padding: 8px 40px; 
   border: none;
   color: #000;
-  font-weight: bold;
+  font-size: 24px;
 }
-input#account-register:hover {
+#account-register:hover {
   color: #ffffff;
 }
 
@@ -73,11 +60,7 @@ input#account-register:hover {
 }
 
 .navbar {
-  min-width: 100vw;
-  padding-left:30px;
-  padding-right:30px;
-  padding-bottom: 1px;
-  margin-bottom: 30px;
+  padding: 10px 25px;
   background-color: #128494;
   color: #ffffff;
   font-size: 18px;
@@ -101,6 +84,11 @@ input#account-register:hover {
   font-size: 64px;
   font-family: 'Poppins', sans-serif;
 }
+#profile {
+  padding-top: 100px;
+  background-color: #ECFEFF;
+}
+
 .user {
   display: flex;
   justify-content: flex-end;
