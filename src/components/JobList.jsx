@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-import JobDetail from './JobDetail'
 
 const JobList = (props) => {
 
@@ -8,11 +6,13 @@ const JobList = (props) => {
         return(
             <li key={`${job.id}`}>
                 <button id="jobtiles" onClick={() => props.handleJobCardClick(job.id)}> 
-                <span id="priority">{job.priority}<br></br></span>
+                <span data-satus="{{job.priority}}" id="priority">{job.priority}<br></br></span>
                 <span id="tileCompany">{job.company} <br></br></span>
                 <span id="tileTile">{job.title} <br></br></span>
                 <span id="tileApplied">{job.dateApplied}</span>
                 </button>
+                <br></br>
+                <br></br>
             </li>
         )
     })
