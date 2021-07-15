@@ -54,6 +54,7 @@ export default function UpdateJob(props) {
                     <option>Rejected</option>
                 </Form.Control>
                 <Button id="updateCard" variant="secondary">Update Card</Button>
+                <Button id="deleteCard" variant="danger" >Delete Card</Button>
             </Form.Group>
             
         

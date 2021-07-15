@@ -1,6 +1,5 @@
 
 const JobList = (props) => {
-
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(
