@@ -1,63 +1,57 @@
-// import { useEffect, useState } from "react"
-import { Redirect } from "react-router-dom"
 import { Form, Button } from "react-bootstrap"
-// import axios from "axios"
-import Login from "./Login"
 
 export default function UpdateJob(props) {
-    console.log(props.job)
-    // TRACKING USER 
-    // redirect if there is no user in state
+    let currentValue = props.job.company
+
     return(
         <div>
-            update card
+            <h4>Update Card</h4>
             <Form.Group controlId="exampleForm.ControlInput1">
-                {/* <Form.Label>Company</Form.Label> */}
-                <Form.Control type="company" placeholder={props.job.company} />
+                <Form.Label>Company</Form.Label>
+                <Form.Control type="company" value={props.company} onChange={(e) => props.setCompany(e.target.value)} placeholder="Company" />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput1">
-                {/* <Form.Label>Job Url</Form.Label> */}
-                <Form.Control type="jobUrl" placeholder="Job URL" />
+                <Form.Label>Job Url</Form.Label>
+                <Form.Control type="jobUrl" value={props.jobURL} onChange={(e) => props.setJobURL(e.target.value)} placeholder="Job URL" />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput1">
-                {/* <Form.Label>Job Title</Form.Label> */}
-                <Form.Control type="jobTiltle" placeholder="Job Title" />
+                <Form.Label>Job Title</Form.Label>
+                <Form.Control type="jobTiltle" value={props.title} onChange={(e) => props.setTitle(e.target.value)} placeholder="Job Title" />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlTextarea1">
-                {/* <Form.Label>Job Description</Form.Label> */}
-                <Form.Control as="textarea" rows={3} placeholder="Job Description"/>
+                <Form.Label>Job Description</Form.Label>
+                <Form.Control as="textarea" rows={3} value={props.description} onChange={(e) => props.setDescription(e.target.value)} placeholder="Job Description"/>
             </Form.Group>
 
              <Form.Group controlId="exampleForm.ControlTextarea1">
-                {/* <Form.Label>Notes</Form.Label> */}
-                <Form.Control as="textarea" rows={3} placeholder="Notes"/>
+                <Form.Label>Notes</Form.Label>
+                <Form.Control as="textarea" rows={3} value={props.notes} onChange={(e) => props.setNotes(e.target.value)} placeholder="Notes"/>
             </Form.Group>
 
-            <label id="calendar" for="start">Start date:</label>
+            <label id="calendar" for="start">Applied on:</label>
             <input type="date" id="start" name="trip-start"
-                value="2021-07-15"
+                value={props.dateApplied} onChange={(e) => props.setDateApplied(e.target.value)} 
                 min="2018-01-01" max="2035-12-31"/>          
             
             <Form.Group controlId="exampleForm.ControlSelect1">
-                {/* <Form.Label>Priority:</Form.Label> */}
-                <Form.Control as="select">
-                    <option>Top Priority</option>
-                    <option>Interested</option>
-                    <option>It's Okay</option>
-                    <option>Interested</option>
+                <Form.Label>Priority:</Form.Label>
+                <Form.Control as="select" value={props.priority} onChange={(e) => props.setPriority(e.target.value)}>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
                 </Form.Control>
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Status:</Form.Label>
-                <Form.Control as="select">
+                <Form.Control as="select" value={props.priority} onChange={(e) => props.setPriority(e.target.value)}>
                     <option>Applied</option>
                     <option>To Apply</option>
                     <option>Interviewed</option>
-                    <option>rejected</option>
+                    <option>Rejected</option>
                 </Form.Control>
                 <Button variant="secondary">Update Card</Button>
             </Form.Group>
