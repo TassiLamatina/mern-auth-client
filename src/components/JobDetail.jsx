@@ -2,11 +2,11 @@ import { Button } from "react-bootstrap"
 
 const JobDetail = (props) => {
     return(
-        <div className='border'>
-            <div className='header'>
+        <div className="detailBox">
+            <div className="header">
                 <h2>Title: {props.job.title}</h2>
             </div>
-            <div className='desc'>
+            <div className="desc pb-3">
                 <strong>{props.job.company}</strong>
                 <br></br>
                 {props.job.jobURL}
@@ -19,9 +19,8 @@ const JobDetail = (props) => {
                 <br></br>
                 Priority: {props.job.priority}
                 <br></br>
-                
-                <Button variant="secondary" onClick={() => props.showUpdateJobForm(props.job) }>Update Card</Button>
             </div>
+            <Button className="updateCardBtn" onClick={() => props.showUpdateJobForm(props.job) }>Update Card</Button>
         </div>
     )
 }
