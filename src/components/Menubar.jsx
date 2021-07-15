@@ -2,7 +2,10 @@ import { Nav } from 'react-bootstrap'
 
 export default function Menubar(props) {
     return(
-        <div id= "menubar">
+        <div id= "menubar1">
+            <div className='menuTitle'>
+                <h2>Your Jobs</h2>
+            </div>
         <Nav defaultActiveKey='applied' className='flex-column'>
             <Nav.Link eventKey='applied' onClick={e => props.handleMenuClick('applied')}>Applied</Nav.Link>
             <Nav.Link eventKey='to-apply' onClick={e => props.handleMenuClick('to-apply')}>To Apply</Nav.Link>

@@ -82,12 +82,16 @@ export default function Profile(props) {
     }
     
     return(
-        <Container>
-            <Row>
-                <Col>
-                <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
-                    <Menubar id="menubar" handleMenuClick={ handleMenuClick } />
+        
+        <div>
+        <Container id="menubarLand">
+            <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
+            <Row id="menuItems">
+                <Col id="menubar">
+                {/* <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button> */}
+                    <Menubar  handleMenuClick={ handleMenuClick } />
                 </Col>
+
                 <Col id="profileBody">
                     <JobList jobData={jobList} handleJobCardClick= { handleJobCardClick }/>
                 </Col>
@@ -96,5 +100,6 @@ export default function Profile(props) {
                 </Col>
             </Row>
         </Container>
+        </div>
     )
 }

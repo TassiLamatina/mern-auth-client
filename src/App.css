@@ -73,6 +73,7 @@ input#account-register:hover {
 }
 
 .navbar {
+  min-width: 100vw;
   padding-left:30px;
   padding-right:30px;
   padding-bottom: 1px;
@@ -107,6 +108,11 @@ input#account-register:hover {
   font-weight: bold;
 }
 
+#menuItems, #menubarLand {
+  width: 97vw;
+
+}
+
 #createbtn {
   display: flex;
   flex-direction: row;
@@ -116,21 +122,41 @@ input#account-register:hover {
   background-color: #8AC76D;
   border-color: #8AC76D;
   color: #000;
-  /* margin-left: 33px;  */
+  
 }
 
 #menubar {
-background-color: #128494;
-height: 100vh;
-margin-top: 30px;
-margin-left: -200px;
-padding-left: -50px;
-text-align: right;
-
+  background-color: #128494;
+  /* width: 276.08px; */
+  height: 80vh;
+  align-items: flex-start;
+  text-align: right;
+  margin-top: 35px; 
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  color:#FFFFFF;
+  
 }
 
-#menubar a:active {
-  background-color: #00B7C2;
+#menuTitle {
+  color:#FFFFFF;
+}
+
+#menubar1 {
+  justify-content: flex-end;
+  padding-right: -20px;
+  margin-right: -13.5px;
+  width: 256.08px;
+  height: 48.67px;
+  color: #FFFFFF;
+}
+
+#menubar1 a.active {
+  background: #00B7C2;
+  border: 3px solid #ECFEFF;
+  box-sizing: border-box;
+  color: #FFFFFF;
 }
 
 #profileBody {
@@ -141,3 +167,17 @@ text-align: right;
   flex-grow: 1;
   justify-content: center;
 }
+ul {
+  list-style-type:none;
+}
+
+#jobtiles {
+  background: #FFFFFF;
+  border: 2px solid #128494;
+  box-sizing: border-box;
+  box-shadow: 0px 12px 0px #128494;
+  border-radius: 17.5381px;
+  height: 102px;
+  width: 294px;
+}
+
