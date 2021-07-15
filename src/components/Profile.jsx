@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Redirect } from "react-router-dom"
 import axios from "axios"
-import Login from "./Login"
+import Welcome from "./Welcome"
 import JobList from './JobList'
 import Menubar from './Menubar'
 import JobDetail from "./JobDetail"
@@ -56,7 +56,7 @@ export default function Profile(props) {
 
     }, [props])
     // redirect if there is no user in state
-    if(!props.currentUser) return <Redirect to='/welcome' component={ Login } currentUser={ props.currentUser } />
+    if(!props.currentUser) return <Redirect to='/' component={ Welcome } currentUser={ props.currentUser } />
 
     // handlers and utils
 
