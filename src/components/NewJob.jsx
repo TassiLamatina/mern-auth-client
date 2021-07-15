@@ -60,7 +60,7 @@ export default function NewJob(props) {
                     <option>Interviewed</option>
                     <option>rejected</option>
                 </Form.Control>
-                <Button variant="secondary">Update Card</Button>
+                <Button id="createCard" variant="secondary">CREATE NEW CARD</Button>
             </Form.Group>
             
         

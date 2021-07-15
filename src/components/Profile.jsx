@@ -98,7 +98,7 @@ export default function Profile(props) {
             <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
             <Row id="menuItems">
                 <Col id="menubar">
-                {/* <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button> */}
+                
                     <Menubar  handleMenuClick={ handleMenuClick } />
                 </Col>
 

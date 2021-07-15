@@ -118,10 +118,12 @@ input#account-register:hover {
 #calendar {
   font-weight: bold;
 }
+#menubarLand {
+  margin: 0;
+}
 
 #menuItems, #menubarLand {
   width: 97vw;
-
 }
 
 #createbtn {
@@ -133,31 +135,46 @@ input#account-register:hover {
   background-color: #8AC76D;
   border-color: #8AC76D;
   color: #000;
-  
+}
+
+#updateCard, #createCard {
+  justify-content: center;
+  align-items: center;
+  background-color: #8AC76D;
+  border-color: #8AC76D;
+  color: #000;
 }
 
 #menubar {
   background-color: #128494;
   /* width: 276.08px; */
   height: 80vh;
-  align-items: flex-start;
+  align-items: right;
   text-align: right;
   margin-top: 35px; 
   padding-right: 0;
   padding-left: 0;
   margin-right: 0;
-  color:#FFFFFF;
-  
+  color:#FFFFFF; 
 }
+#menubar a{
+  color: white !important;
+  }
 
 #menuTitle {
   color:#FFFFFF;
+  justify-content: center;
+}
+
+#jobFilterBtn {
+  justify-content: center;
+  margin-top: 25px;
 }
 
 #menubar1 {
   justify-content: flex-end;
-  padding-right: -20px;
-  margin-right: -13.5px;
+  /* padding-right: -20px; */
+  /* margin-right: -13.5px; */
   width: 256.08px;
   height: 48.67px;
   color: #FFFFFF;

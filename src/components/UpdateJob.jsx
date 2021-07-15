@@ -59,7 +59,7 @@ export default function UpdateJob(props) {
                     <option>Interviewed</option>
                     <option>rejected</option>
                 </Form.Control>
-                <Button variant="secondary">Update Card</Button>
+                <Button id="updateCard" variant="secondary">Update Card</Button>
             </Form.Group>
             
         
