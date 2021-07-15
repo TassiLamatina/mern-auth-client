@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import{ Navbar }from 'react-bootstrap'
+import{ Navbar, Container, Col }from 'react-bootstrap'
 
 
 // require("react-bootstrap/lib/NavbarHeader")
@@ -13,30 +13,23 @@ export default function NewNavbar(props) {
     const loggedIn = (
         <>
         <Navbar expand="lg">
-                <Navbar.Brand id="clambr">clambr</Navbar.Brand>
-            {/* <Link to="/">
-                Home  
-            </Link>    */}
-            <Link to="/">
-                <span onClick={props.handleLogout}>  Logout </span>
-            </Link>
-            <Link to="/profile">           
-                Profile  
-            </Link>
-            <Link to="/login">
-                Login  
-            </Link>
-
-            <Link to="/register">
-                 New Account
-            </Link>               
-            <Navbar.Collapse className="justify-content-end">                  
-            <Navbar.Text pullRight>
-            <img src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png"/>
-            <alt>Hi  {props.currentUser ? props.currentUser.name : ""} !</alt>
-            {console.log(props.currentUser)}
-            </Navbar.Text>
-            </Navbar.Collapse>
+            <Col xs={6} md={10}>
+                <Navbar.Brand id="clambr">Clambr</Navbar.Brand>
+            </Col>
+            <Col xs={4} md={2} className="user-col">
+                <div className="user">              
+                    <p>Hi {props.currentUser ? props.currentUser.name : ""}!</p>
+                    {console.log(props.currentUser)}
+                </div>
+                <div className="icon"> 
+                    <img className="img-fluid" src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png" alt="person-icon"/>
+                </div>
+                <div className="logout">
+                    <Link to="/">
+                        <span onClick={props.handleLogout}>Logout</span>
+                    </Link>
+                </div> 
+            </Col>
         </Navbar>  
     </>
     )
