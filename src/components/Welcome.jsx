@@ -73,7 +73,7 @@ export default function Welcome(props) {
                             <input className="sign-in-submit" type="submit"></input>
                         </div>
                     </form>
-                    <p>{message} </p>
+                    <p className="text-center">{message}</p>
                     <div className="account text-center">
                         <p>Don't have an account?</p>
                         <Link to="/register">

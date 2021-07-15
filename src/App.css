@@ -22,7 +22,7 @@ input.sign-in-submit {
   padding: 8px 40px; 
   border: none;
   color: #000;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 input.sign-in-submit:hover {
@@ -32,10 +32,10 @@ input.sign-in-submit:hover {
 #account-register {
   border-radius: 60px;
   background-color: #8AC76D;
-  padding: 8px 40px; 
+  padding: 8px 20px; 
   border: none;
   color: #000;
-  font-size: 24px;
+  font-size: 18px;
 }
 #account-register:hover {
   color: #ffffff;
@@ -85,7 +85,7 @@ input.sign-in-submit:hover {
   font-family: 'Poppins', sans-serif;
 }
 #profile {
-  padding-top: 100px;
+  padding-top: 40px;
   background-color: #ECFEFF;
 }
 
