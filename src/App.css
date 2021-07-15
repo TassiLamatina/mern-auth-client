@@ -176,7 +176,25 @@ input.sign-in-submit:hover {
 }
 
 #profileBody {
-  margin-top: 82px;
+  margin-top: 30px;
+}
+
+.detailBox {
+  background-color: #fff;
+  border-radius: 28px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 15px 20px;
+}
+
+.updateCardBtn {
+  background-color: #8AC76D;
+  color: #000;
+  border:none;
+  border-radius: 28px;
+}
+.updateCardBtn:hover {
+  background-color: #9bdb7d;
+  color:#fff;
 }
 
 #row {
