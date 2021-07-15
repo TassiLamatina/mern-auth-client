@@ -76,6 +76,18 @@ export default function Profile(props) {
         setSelected(id)
     }
 
+    const handleJobCreate = () => {
+        console.log('TODO: create job')
+    }
+
+    const handleJobUpdate = (id) => {
+        console.log(`TODO: update ${id}`)
+    }
+
+    const handleJobDelete = (id) => {
+        console.log(`TODO: delete ${id}`)
+    }
+
     const showNewJobForm = () => {
         setAction('create')
         setSelected(null)
@@ -94,6 +106,8 @@ export default function Profile(props) {
         setStatus(job.status)
     }
 
+
+
     // display pane logic 
 
     let selectedJobPane
@@ -103,7 +117,11 @@ export default function Profile(props) {
             selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ jobList.find( job => job.id === selected) }/>
         } else if(action === 'update') {
             selectedJobPane = <UpdateJob 
+            handleJobUpdate={handleJobUpdate}
+            handleJobDelete={handleJobDelete}
+
             job={ selected } 
+
             company={company} setCompany={setCompany}
             jobURL={jobURL} setJobURL={setJobURL}
             title={title} setTitle={setTitle}
@@ -116,7 +134,7 @@ export default function Profile(props) {
         }
 
     } else {
-        selectedJobPane = <NewJob />
+        selectedJobPane = <NewJob handleJobCreate={handleJobCreate} />
     }
     
     return(

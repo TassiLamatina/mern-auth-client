@@ -57,6 +57,7 @@ export default function NewJob(props) {
                     <option>Interviewed</option>
                     <option>Rejected</option>
                 </Form.Control>
+                <Button id="createCard" variant="secondary" onClick={props.handleJobCreate}>CREATE NEW CARD</Button>
             </Form.Group>
             <div className="create-btn">
                 <Button id="createCard">Submit</Button>
