@@ -30,7 +30,7 @@ const jobData = [
         notes: 'Applied with my designer resume',
         dateApplied: '2021-05-25',
         priority: 'Low',
-        status: 'To-apply'
+        status: 'To Apply'
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const jobData = [
         notes: 'Applied with my designer resume',
         dateApplied: '2021-05-30',
         priority: 'High',
-        status: 'To-apply'
+        status: 'To Apply'
     },
     {
         id: 5,
