@@ -63,7 +63,6 @@ export default function Profile(props) {
     const handleMenuClick = (filter) => {
         // filter list of jobs by status
 
-        setAction('create')
         setSelected(null)
 
         setFilter(filter)

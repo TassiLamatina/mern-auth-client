@@ -106,17 +106,6 @@ input.sign-in-submit:hover {
   font-weight: bold;
 }
 
-#priority[data-status="high"]:after {
-  box-shadow: inset 5em 1em #F97272;
- }
-
- .priority[data-status="medium"]:after {
-  background: #F9F372;
- }
-
- .priority[data-status="low"]:after {
-  background: #9DF972;
- }
 
 #menubarLand {
   margin: 0;
@@ -147,7 +136,7 @@ input.sign-in-submit:hover {
 
 #menubar {
   background-color: #128494;
-  /* width: 276.08px; */
+  width: 276.08px;
   height: 80vh;
   align-items: right;
   text-align: right;

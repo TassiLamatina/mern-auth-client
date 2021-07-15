@@ -1,8 +1,6 @@
-// import { useEffect, useState } from "react"
-import { Redirect } from "react-router-dom"
 import { Form, Button } from "react-bootstrap"
 // import axios from "axios"
-import Login from "./Login"
+
 
 
 export default function NewJob(props) {
@@ -58,7 +56,7 @@ export default function NewJob(props) {
                     <option>Applied</option>
                     <option>To Apply</option>
                     <option>Interviewed</option>
-                    <option>rejected</option>
+                    <option>Rejected</option>
                 </Form.Control>
                 <Button id="createCard" variant="secondary">CREATE NEW CARD</Button>
             </Form.Group>
