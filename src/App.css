@@ -89,17 +89,7 @@ input#account-register:hover {
 }
 
 .navbar p {
-  padding-right: 5px;
-  display: inline-block;
-}
-
-@media (max-width: 768px) {
-  .row {
-    height: 1134px !important;
-  }
-  .splash {
-    background-size: cover !important;
-  }
+  margin-bottom: .5rem;
 }
 
 #clambr {
@@ -107,7 +97,20 @@ input#account-register:hover {
   font-weight: bold;
   font-size: 64px;
   font-family: 'Poppins', sans-serif;
+}
+.user {
+  display: flex;
+  justify-content: flex-end;
 } 
+.icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.logout {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 #calendar {
   font-weight: bold;
@@ -146,4 +149,27 @@ text-align: right;
 #row {
   flex-grow: 1;
   justify-content: center;
+}
+
+/**** MEDIA QUERY LEAVE AT BOTTOM ****/
+@media (max-width: 768px) {
+  .row {
+    height: 1134px !important;
+  }
+  .splash {
+    background-size: cover !important;
+  }
+  span#clambr {
+    font-size: 3rem;
+    display: block; 
+  }
+  .user-col {
+    flex-direction: column;
+  }
+  .user-col p {
+    display: none;
+  }
+  .navbar p {
+    padding-right: 0;
+  }
 }
