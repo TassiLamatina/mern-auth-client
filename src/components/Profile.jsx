@@ -52,7 +52,7 @@ export default function Profile(props) {
 
     const handleMenuClick = (filter) => {
         // filter list of jobs by status
-        
+
         setAction('create')
         setSelected(null)
 
@@ -72,15 +72,20 @@ export default function Profile(props) {
         setSelected(null)
     }
 
+    const showUpdateJobForm = (job) => {
+        setAction('update')
+        setSelected(job)
+    }
+
     // display pane logic 
 
     let selectedJobPane
 
     if(selected) {
         if(action === 'view'){
-            selectedJobPane = <JobDetail job={ jobList.find( job => job.id === selected) }/>
+            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ jobList.find( job => job.id === selected) }/>
         } else if(action === 'update') {
-            selectedJobPane = <UpdateJob job={ jobList.find( job => job.id === selected) } />
+            selectedJobPane = <UpdateJob job={ selected } />
         }
     } else {
         selectedJobPane = <NewJob />
