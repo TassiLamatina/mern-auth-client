@@ -73,7 +73,7 @@ function App() {
           {/* conditionally render a redirect for auth locked routes */}
           <Route 
             path="/profile"
-            render={ props => currentUser ? <Profile {...props} currentUser={ currentUser } handleLogout={ handleLogout }/> : <Redirect to="/login" />}
+            render={ props => currentUser ? <Profile {...props} currentUser={ currentUser } handleLogout={ handleLogout }/> : <Redirect to="/" />}
           />
         </Switch>
       </div>
