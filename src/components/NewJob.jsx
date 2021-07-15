@@ -58,7 +58,7 @@ export default function NewJob(props) {
                     <option>Applied</option>
                     <option>To Apply</option>
                     <option>Interviewed</option>
-                    <option>rejected</option>
+                    <option>Rejected</option>
                 </Form.Control>
                 <Button id="createCard" variant="secondary">CREATE NEW CARD</Button>
             </Form.Group>
