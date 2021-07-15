@@ -5,16 +5,15 @@ import { Form, Button } from "react-bootstrap"
 import Login from "./Login"
 
 export default function UpdateJob(props) {
-    
+    console.log(props.job)
     // TRACKING USER 
     // redirect if there is no user in state
-    if(!props.currentUser) return <Redirect to='/login' component={ Login } currentUser={ props.currentUser } />
     return(
         <div>
-        
+            update card
             <Form.Group controlId="exampleForm.ControlInput1">
                 {/* <Form.Label>Company</Form.Label> */}
-                <Form.Control type="company" placeholder="Company Name" />
+                <Form.Control type="company" placeholder={props.job.company} />
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput1">

@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap"
+
 const JobDetail = (props) => {
     return(
         <div className='border'>
@@ -16,6 +18,9 @@ const JobDetail = (props) => {
                 <strong>Date Applied: {props.job.dateApplied}</strong>
                 <br></br>
                 Priority: {props.job.priority}
+                <br></br>
+                
+                <Button variant="secondary" onClick={() => props.showUpdateJobForm(props.job) }>Update Card</Button>
             </div>
         </div>
     )
