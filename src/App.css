@@ -106,21 +106,6 @@ input.sign-in-submit:hover {
   font-weight: bold;
 }
 
-/* #priority {
-  background-color: blueviolet;
-} */
-
-/* #priority[data-status="high"]:after {
-  box-shadow: inset 5em 1em #F97272;
- }
-
- .priority[data-status="medium"]:after {
-  background: #F9F372;
- }
-
- .priority[data-status="low"]:after {
-  background: #9DF972;
- } */
 
 #menubarLand {
   margin: 0;
