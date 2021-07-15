@@ -46,7 +46,7 @@ export default function Profile(props) {
 
     }, [props])
     // redirect if there is no user in state
-    if(!props.currentUser) return <Redirect to='/login' component={ Login } currentUser={ props.currentUser } />
+    if(!props.currentUser) return <Redirect to='/' component={ Login } currentUser={ props.currentUser } />
 
     // handlers and utils
 
@@ -92,8 +92,7 @@ export default function Profile(props) {
     }
     
     return(
-        
-        <div>
+        <div id="profile">
         <Container id="menubarLand">
             <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
             <Row id="menuItems">

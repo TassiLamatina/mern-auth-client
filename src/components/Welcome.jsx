@@ -68,8 +68,8 @@ export default function Welcome(props) {
                             <label className="form-label">SIGN IN:</label>
                             <input onChange={e => setEmail(e.target.value) } className="form-control" value={email} type="text" name="username" placeholder="Username or email"/>
                         </div>
-                        <div className="mb-4 text-center">
-                            <input onChange={e => setPassword(e.target.value) } className="form-control mb-3" value={password} type="password" name="password" placeholder="Password"/>
+                        <div className="mb-3 text-center">
+                            <input onChange={e => setPassword(e.target.value) } className="form-control mb-4" value={password} type="password" name="password" placeholder="Password"/>
                             <input className="sign-in-submit" type="submit"></input>
                         </div>
                     </form>
@@ -77,7 +77,7 @@ export default function Welcome(props) {
                     <div className="account text-center">
                         <p>Don't have an account?</p>
                         <Link to="/register">
-                            <button type="button" className="create-acc">Create Account</button>
+                            <button type="button" id="account-register">Create Account</button>
                         </Link>
                     </div>
                 </div>
