@@ -139,9 +139,9 @@ export default function Profile(props) {
     
     return(
         <div id="profile">
-        <Container fluid id="menubarLand">
+        <div id="menubarLand">
             <Row>
-                <Col sm={12} md={3}>
+                <Col lg={3}>
                     <div className="create-btn">
                         <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
                     </div>
@@ -150,14 +150,14 @@ export default function Profile(props) {
                     </div>
                 </Col>
 
-                <Col sm={12} md={4} id="jobCards">
+                <Col lg={3} id="jobCards">
                     <JobList jobData={jobList} handleJobCardClick= { handleJobCardClick }/>
                 </Col>
-                <Col xs={12} md={5} id="jobDetail">
+                <Col lg={5} id="jobDetail">
                     {selectedJobPane}
                 </Col>
             </Row>
-        </Container>
+        </div>
         </div>
     )
 }
