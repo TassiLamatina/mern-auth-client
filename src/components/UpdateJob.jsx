@@ -1,7 +1,6 @@
 import { Form, Button } from "react-bootstrap"
 
 export default function UpdateJob(props) {
-    let currentValue = props.job.company
 
     return(
         <>
