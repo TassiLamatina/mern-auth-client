@@ -1,6 +1,6 @@
 # Welcome to Clambr!
 
-Clambr was a joint creation made to help you simplyfy your job hunt.
+Clambr was a joint creation made to help you simplify your job hunt.
 
 Has your job search become tricky because you can't remember all the jobs you've applied to?
 This is exactly why we have created Clambr. With our app you can record and keep track of all the jobs you are interested in with specifiic information to help you ace your interview stage. 
