@@ -57,6 +57,7 @@ export default function NewJob(props) {
                     <option>To Apply</option>
                     <option>Interviewed</option>
                     <option>Rejected</option>
+                    <option>Archive</option>
                 </Form.Control>
             </Form.Group>
             <div className="create-btn">

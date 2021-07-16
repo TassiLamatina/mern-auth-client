@@ -63,15 +63,19 @@ export default function Profile(props) {
 
     // handlers and utils
 
-    const handleMenuClick = (filter) => {
+    const handleMenuClick = (newFilter) => {
         // filter list of jobs by status
 
         setSelected(null)
 
-        setFilter(filter)
+        setFilter(newFilter)
         setAction('view')
-        let filteredJobs = jobList.filter(job => job.status === filter)
-        setFilteredJobList(filteredJobs)
+        if (!newFilter) {
+            setFilteredJobList(jobList)
+        } else {
+            let filteredJobs = jobList.filter(job => job.status === newFilter)
+            setFilteredJobList(filteredJobs)
+        }
     }
 
     const handleJobCardClick = (job) => {

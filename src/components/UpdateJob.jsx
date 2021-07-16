@@ -53,6 +53,7 @@ export default function UpdateJob(props) {
                     <option>To Apply</option>
                     <option>Interviewed</option>
                     <option>Rejected</option>
+                    <option>Archive</option>
                 </Form.Control>
             </Form.Group>
             <div className="create-btn">
