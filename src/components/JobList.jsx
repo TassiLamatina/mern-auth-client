@@ -17,7 +17,8 @@ background-color: ${props => {
        return "white"
      }
      }};
-     
+     box-shadow: 0px 12px 0px #FFFFFF;
+     border-radius: 200.5381px;
 
 `;
 
@@ -28,7 +29,7 @@ const JobList = (props) => {
     const renderedJobs = props.jobData.map(job => {
         return(
             <li key={`${job._id}`}>
-                <button id="jobtiles" onClick={() => props.handleJobCardClick(job._id)}> 
+                <button id="jobtiles" onClick={() => props.handleJobCardClick(job)}> 
                 <PrioritySpan priority={`${job.priority}`} id="priority">{job.priority}<br></br></PrioritySpan>
                 <span id="tileCompany">{job.company} <br></br></span>
                 <span id="tileTile">{job.title} <br></br></span>

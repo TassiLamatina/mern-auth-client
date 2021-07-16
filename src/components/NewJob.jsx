@@ -29,17 +29,18 @@ export default function NewJob(props) {
                 <Form.Control as="textarea" rows={3} placeholder="Job Description"/>
             </Form.Group>
 
-             <Form.Group controlId="exampleForm.ControlTextarea1" className="mb-2">
+             <Form.Group controlId="exampleForm.ControlTextarea1" className="mb-3">
                 {/* <Form.Label>Notes</Form.Label> */}
                 <Form.Control as="textarea" rows={3} placeholder="Notes"/>
             </Form.Group>
-
-            <label id="calendar" for="start">Start date:</label>
-            <input type="date" id="start" name="trip-start"
-                value="2021-07-15"
-                min="2018-01-01" max="2035-12-31"/>         
+            <div className="start-date">
+                <label className="mb-3 px-1" id="calendar" for="start">Start date:</label>
+                <input className="mb-3" type="date" id="start" name="trip-start"
+                    value="2021-07-15"
+                    min="2018-01-01" max="2035-12-31"/>  
+            </div>       
             
-            <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Group controlId="exampleForm.ControlSelect1" className="mb-2">
                 {/* <Form.Label>Priority:</Form.Label> */}
                 <Form.Control as="select">
                     <option>Top Priority</option>
@@ -57,7 +58,6 @@ export default function NewJob(props) {
                     <option>Interviewed</option>
                     <option>Rejected</option>
                 </Form.Control>
-                <Button id="createCard" variant="secondary" onClick={props.handleJobCreate}>CREATE NEW CARD</Button>
             </Form.Group>
             <div className="create-btn">
                 <Button id="createCard">Submit</Button>

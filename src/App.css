@@ -7,11 +7,6 @@ body {
   margin: 0 auto;
 }
 
-#sign-in {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .form-label{
   font-weight: 700;
 }
@@ -97,9 +92,21 @@ input.sign-in-submit:hover {
 #jobCards {
   margin-top: 65px;
 }
+#jobCards ul {
+ padding-left: 0;
+}
 
 #jobDetail {
   margin-top: 65px;
+  padding-left: 110px;
+}
+
+#jobDetail h4{
+  text-align: center;
+}
+
+.start-date, .apply-date {
+  text-align: center;
 }
 
 .user {
@@ -119,14 +126,9 @@ input.sign-in-submit:hover {
   font-weight: bold;
 }
 
-
-/* #menubarLand {
+#menubarLand {
   margin: 0;
-}
-
-#menuItems, #menubarLand {
-  width: 97vw;
-} */
+} 
 
 #createbtn {
   background-color: #8AC76D;
@@ -148,14 +150,12 @@ input.sign-in-submit:hover {
 
 #menubar {
   background-color: #128494;
-  /* width: 276.08px; */
   padding-top: 10px;
   height: 80vh;
   text-align: right;
   margin-top: 35px; 
-  /* padding-right: 0;
-  padding-left: 0;
-  margin-right: 0; */
+
+  margin-right: 15px;
   color:#FFFFFF; 
 }
 #menubar a{
@@ -173,16 +173,13 @@ input.sign-in-submit:hover {
 
 #menubar1 {
   justify-content: flex-end;
-  /* padding-right: -20px; */
-  /* margin-right: -13.5px; */
   height: 48.67px;
   color: #FFFFFF;
 }
 
 #menubar1 a.active {
   background: #00B7C2;
-  border: 3px solid #ECFEFF;
-  box-sizing: border-box;
+  border: 2px solid #ECFEFF;
   color: #FFFFFF;
 }
 
