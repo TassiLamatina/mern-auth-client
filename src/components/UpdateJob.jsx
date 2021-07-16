@@ -4,7 +4,7 @@ export default function UpdateJob(props) {
     let currentValue = props.job.company
 
     return(
-        <div>
+        <>
             <h4>Update Card</h4>
             <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>Company</Form.Label>
@@ -45,7 +45,7 @@ export default function UpdateJob(props) {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Group controlId="exampleForm.ControlSelect1" className="mb-3">
                 <Form.Label>Status:</Form.Label>
                 <Form.Control as="select" value={props.priority} onChange={(e) => props.setPriority(e.target.value)}>
                     <option>Applied</option>
@@ -53,11 +53,16 @@ export default function UpdateJob(props) {
                     <option>Interviewed</option>
                     <option>Rejected</option>
                 </Form.Control>
+<<<<<<< HEAD
+=======
                 <Button id="updateCard" variant="secondary" onClick={() => props.handleJobUpdate(props.job.id)}>Update Card</Button>
                 <Button id="deleteCard" variant="danger" onClick={() => props.handleJobDelete(props.job.id)}>Delete Card</Button>
+>>>>>>> edfb43a276bd46d771039443486520ce78f93bd5
             </Form.Group>
-            
-        
-        </div>
+            <div className="create-btn">
+                <Button id="updateCard">Update Card</Button>
+                <Button id="deleteCard" variant="danger" >Delete Card</Button>
+            </div>
+        </>
     )
 }
