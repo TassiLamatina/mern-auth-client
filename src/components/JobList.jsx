@@ -17,7 +17,8 @@ background-color: ${props => {
        return "white"
      }
      }};
-     
+     box-shadow: 0px 12px 0px #FFFFFF;
+     border-radius: 200.5381px;
 
 `;
 
