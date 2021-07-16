@@ -48,7 +48,7 @@ export default function Profile(props) {
                 // set state with the data from the server
                 setJobList(response.data.jobs)
                 setFilteredJobList(response.data.jobs)
-                console.log(jobList)
+                // console.log(jobList)
             } catch (err) {
                 console.log(err)
                 //log the user out if an error occurs

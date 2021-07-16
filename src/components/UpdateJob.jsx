@@ -55,7 +55,6 @@ export default function UpdateJob(props) {
                     <option>Interviewed</option>
                     <option>Rejected</option>
                 </Form.Control>
-              
             </Form.Group>
             <div className="create-btn">
                 <Button id="updateCard" variant="secondary" onClick={() => props.handleJobUpdate(props.job.id)}>Update Card</Button>
