@@ -89,7 +89,8 @@ export default function Profile(props) {
             jobURL: jobURL,
             notes: notes,
             priority: priority,
-            status: status
+            status: status,
+            dateApplied: dateApplied
         }
 
         // make post request
@@ -127,6 +128,7 @@ export default function Profile(props) {
         selected.notes = notes
         selected.priority = priority
         selected.status = status
+        selected.dateApplied = dateApplied
 
         const token = localStorage.getItem('jwtToken')
 
