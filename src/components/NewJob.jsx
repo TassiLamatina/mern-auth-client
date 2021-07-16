@@ -8,7 +8,8 @@ export default function NewJob(props) {
     // TRACKING USER 
     // redirect if there is no user in state
     return(
-        <>
+        <>  
+            <h4>Create Card</h4>
             <Form.Group controlId="exampleForm.ControlInput1" className="mb-2">
                 <Form.Label>Company</Form.Label>
                 <Form.Control type="company" value={props.company} onChange={(e) => props.setCompany(e.target.value)} placeholder="Company" />
