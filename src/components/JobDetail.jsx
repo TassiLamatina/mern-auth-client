@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap"
 
 const JobDetail = (props) => {
+    console.log(props)
     return(
         <div className="detailBox">
             <div className="header">

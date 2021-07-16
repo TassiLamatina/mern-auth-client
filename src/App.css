@@ -84,6 +84,19 @@ input.sign-in-submit:hover {
   background-color: #ECFEFF;
 }
 
+.create-btn{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#jobCards {
+  margin-top: 65px;
+}
+
+#jobDetail {
+  margin-top: 65px;
+}
+
 .user {
   display: flex;
   justify-content: flex-end;
@@ -102,52 +115,50 @@ input.sign-in-submit:hover {
 }
 
 
-#menubarLand {
+/* #menubarLand {
   margin: 0;
 }
 
 #menuItems, #menubarLand {
   width: 97vw;
-}
+} */
 
 #createbtn {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
   background-color: #8AC76D;
-  border-color: #8AC76D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  border:none;
   color: #000;
 }
 
 #updateCard, #createCard {
-  justify-content: center;
-  align-items: center;
   background-color: #8AC76D;
-  border-color: #8AC76D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  border: none;
   color: #000;
+  font-size: 18px;
+  letter-spacing: 0.06em;
 }
 
 #menubar {
   background-color: #128494;
-  width: 276.08px;
+  /* width: 276.08px; */
+  padding-top: 10px;
   height: 80vh;
-  align-items: right;
   text-align: right;
   margin-top: 35px; 
-  padding-right: 0;
+  /* padding-right: 0;
   padding-left: 0;
-  margin-right: 0;
+  margin-right: 0; */
   color:#FFFFFF; 
 }
 #menubar a{
   color: white !important;
   }
 
-#menuTitle {
-  color:#FFFFFF;
-  justify-content: center;
+.menuTitle {
+  text-align: center;
 }
 
 #jobFilterBtn {
@@ -157,7 +168,8 @@ input.sign-in-submit:hover {
 
 #menubar1 {
   justify-content: flex-end;
-  width: 256.08px;
+  /* padding-right: -20px; */
+  /* margin-right: -13.5px; */
   height: 48.67px;
   color: #FFFFFF;
 }
@@ -179,6 +191,9 @@ input.sign-in-submit:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 15px 20px;
 }
+.newJob {
+  margin-bottom: 10px;
+}
 
 .updateCardBtn {
   background-color: #8AC76D;
@@ -189,6 +204,12 @@ input.sign-in-submit:hover {
 .updateCardBtn:hover {
   background-color: #9bdb7d;
   color:#fff;
+}
+#deleteCard {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  font-size: 18px;
+  letter-spacing: 0.06em;
 }
 
 #row {
@@ -210,6 +231,10 @@ ul {
   width: 294px;
 }
 
+#jobDetail .form-control {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 28px;
+}
 
 
 /**** MEDIA QUERY LEAVE AT BOTTOM ****/
