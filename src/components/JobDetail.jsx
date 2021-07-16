@@ -1,27 +1,26 @@
+import { Button } from "react-bootstrap"
 
-// test data -- to be replaced with passed props.job
-const test =
-    {
-        id: 1,
-        title: 'ceo',
-        salary: '1000000',
-        priority: 'high'
-    }
-
-
-const JobDetail = () => {
-    console.log(test.title)
-
+const JobDetail = (props) => {
     return(
-        <div className='border'>
-            <div className='header'>
-                <h2>Selected Job Position: {test.title}</h2>
+        <div className="detailBox">
+            <div className="header">
+                <h2>Title: {props.job.title}</h2>
             </div>
-            <div className='desc'>
-                ${test.salary}
+            <div className="desc pb-3">
+                <strong>{props.job.company}</strong>
                 <br></br>
-                Priority: {test.priority}
+                {props.job.jobURL}
+                <br></br>
+                <small>{props.job.description}</small>
+                <br></br>
+                <strong>Notes: </strong><small>{props.job.notes}</small>
+                <br></br>
+                <strong>Date Applied: {props.job.dateApplied}</strong>
+                <br></br>
+                Priority: {props.job.priority}
+                <br></br>
             </div>
+            <Button className="updateCardBtn" onClick={() => props.showUpdateJobForm(props.job) }>Update Card</Button>
         </div>
     )
 }

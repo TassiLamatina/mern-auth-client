@@ -1,72 +1,28 @@
-Hi team 5
+# Welcome to Clambr!
 
-# Getting Started with Create React App
+Clambr was a joint creation made to help you simplyfy your job hunt.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Has your job search become tricky because you can't remember all the jobs you've applied to?
+This is exactly why we have created Clambr. With our app you can record and keep track of all the jobs you are interested in with specifiic information to help you ace your interview stage. 
 
-## Available Scripts
+We used a combination of React, Javascript, bootstrap, MongoDB, Express RESTful routes, axios, jsonWebtoken, DOM manipulation and Styled Components. (If you plan on cloning our App please do not forget to "**npm i**" inside your terminal to get all of our dependencies up and running.)
 
-In the project directory, you can run:
+We were able to come to a compromise pretty quickly on our theme since we're all going to be joining the job-search field in a couple of weeks. Our main goal was to create something extremely simple that could assist absolutely anyone in tracking/logging all of the jobs they're interested in. After pitching our ideas to the UX team we were able to come up with the entire layout and all functionalities very quickly. Everyone was thinking along the same lines and the whole project came together in a snap. 
 
-### `npm start`
+here is the link for our Wireframes, Moodboard and User Story created by our awesome UX team:
+https://www.figma.com/file/4KDTdoQgUrqkazCW3g35wk/Collabathon_503%2F517?node-id=80%3A1084
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Our only unresolved issues as of now are our stretch goals.
+The strech goals are:
+1. OAuth
+2. Remember Me checkbox connected to local storage
+3. Sort button Filter for job cards
+4. Option to upload files with Cloudinary
+5. Option to customize user profile image
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Clambr](public/ClambrHome.png)
+![Clambr](public/ClambrAction.png)

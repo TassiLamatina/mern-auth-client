@@ -7,48 +7,32 @@ body {
   margin: 0 auto;
 }
 
-#sign-in {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .form-label{
   font-weight: 700;
 }
-.account button {
-  border-radius: 58px;
-  background-color: #128494; 
-  border: none;
-  padding: 25px 15px;
-  color: #000;
-  font-weight: 700;
-}
-
-.account button:hover {
-  color: #fff
-}
 
 input.sign-in-submit {
-  border-radius: 58px;
-  background-color: #128494;
-  padding: 10px 15px; 
+  border-radius: 60px;
+  background-color: #8AC76D;
+  padding: 8px 40px; 
   border: none;
   color: #000;
-  font-weight: 700;
+  font-size: 22px;
 }
 
 input.sign-in-submit:hover {
   color: #fff;
 }
 
-input#account-register {
+#account-register {
   border-radius: 60px;
   background-color: #8AC76D;
-  padding: 8px 40px; 
+  padding: 8px 20px; 
   border: none;
   color: #000;
+  font-size: 18px;
 }
-input#account-register:hover {
+#account-register:hover {
   color: #ffffff;
 }
 
@@ -61,29 +45,32 @@ input#account-register:hover {
   font-size: 24px;
   font-weight: 500;
 }
+.register-col a {
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit; 
+} 
+.register-col a .login {
+  font-size: 18px;
+}
 
 .navbar {
-  padding-left:30px;
-  padding-right:30px;
-  padding-bottom: 1px;
-  margin-bottom: 100px;
+  padding: 10px 25px;
   background-color: #128494;
   color: #ffffff;
-  font-size: 15px;
-
-}
-.navbar-custom {
-  background-color: #128494;
-  color: #ffffff;
+  font-size: 18px;
 }
 
-@media (max-width: 768px) {
-  .row {
-    height: 1134px !important;
-  }
-  .splash {
-    background-size: cover !important;
-  }
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #000;
+}
+
+.navbar p {
+  margin-bottom: .5rem;
 }
 
 #clambr {
@@ -91,4 +78,195 @@ input#account-register:hover {
   font-weight: bold;
   font-size: 64px;
   font-family: 'Poppins', sans-serif;
+}
+#profile {
+  padding-top: 40px;
+  background-color: #ECFEFF;
+}
+
+.create-btn{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#jobCards {
+  margin-top: 65px;
+}
+#jobCards ul {
+ padding-left: 0;
+}
+
+#jobDetail {
+  margin-top: 65px;
+  padding-left: 110px;
+}
+
+#jobDetail h4{
+  text-align: center;
+}
+
+.start-date, .apply-date {
+  text-align: center;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-end;
 } 
+.icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.logout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#calendar {
+  font-weight: bold;
+}
+
+#menubarLand {
+  margin: 0;
+} 
+
+#createbtn {
+  background-color: #8AC76D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  border:none;
+  color: #000;
+}
+#createbtn:hover {
+  background-color: #a4e386;
+  color: #fff;
+}
+
+#updateCard, #createCard {
+  background-color: #8AC76D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  border: none;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+#updateCard:hover, #createCard:hover {
+background-color: #a4e386;
+  color: #fff;
+}
+
+#menubar {
+  background-color: #128494;
+  padding-top: 10px;
+  height: 80vh;
+  text-align: right;
+  margin-top: 35px; 
+
+  margin-right: 15px;
+  color:#FFFFFF; 
+}
+#menubar a{
+  color: white !important;
+  }
+
+.menuTitle {
+  text-align: center;
+}
+
+#jobFilterBtn {
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#menubar1 {
+  justify-content: flex-end;
+  height: 48.67px;
+  color: #FFFFFF;
+}
+
+#menubar1 a.active {
+  background: #00B7C2;
+  border: 2px solid #ECFEFF;
+  color: #FFFFFF;
+}
+
+#profileBody {
+  margin-top: 30px;
+}
+
+.detailBox {
+  background-color: #fff;
+  border-radius: 28px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 15px 20px;
+}
+.newJob {
+  margin-bottom: 10px;
+}
+
+.updateCardBtn {
+  background-color: #8AC76D;
+  color: #000;
+  border:none;
+  border-radius: 28px;
+}
+.updateCardBtn:hover {
+  background-color: #9bdb7d;
+  color:#fff;
+}
+#deleteCard {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+#row {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+ul {
+  list-style-type:none;
+}
+
+#jobtiles {
+  background: #FFFFFF;
+  border: 2px solid #128494;
+  box-sizing: border-box;
+  box-shadow: 0px 12px 0px #128494;
+  border-radius: 17.5381px;
+  height: 102px;
+  width: 294px;
+}
+
+#jobDetail .form-control {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 28px;
+}
+
+
+/**** MEDIA QUERY LEAVE AT BOTTOM ****/
+@media (max-width: 768px) {
+  .row {
+    height: 1134px !important;
+  }
+  .splash {
+    background-size: cover !important;
+  }
+  span#clambr {
+    font-size: 3rem;
+    display: block; 
+  }
+  .user-col {
+    flex-direction: column;
+  }
+  .user-col p {
+    display: none;
+  }
+  .navbar p {
+    padding-right: 0;
+  }
+}
+

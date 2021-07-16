@@ -1,26 +1,52 @@
-import { Link } from 'react-router-dom'
-import JobDetail from './JobDetail'
+import styled from "styled-components";
+
+
+const PrioritySpan = styled.div`
+/* Adapt the colors based on primary prop */
+background-color: ${props => {
+  if(props.priority === "High"){
+    return "#F97272"
+  }
+  else if(props.priority === "Medium"){
+     return "#F9F372"
+  }
+     else if(props.priority === "Low"){
+     return "#9DF972"
+     }
+     else{
+       return "white"
+     }
+     }};
+     box-shadow: 0px 12px 0px #FFFFFF;
+     border-radius: 200.5381px;
+
+`;
 
 const JobList = (props) => {
-    // console.log(props)
+
+
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(
-            <li key={`${job.id}`}>
-                <Link to={`/job/${job.id}`}>{job.title}</Link>
+            <li key={`${job._id}`}>
+                <button id="jobtiles" onClick={() => props.handleJobCardClick(job)}> 
+                <PrioritySpan priority={`${job.priority}`} id="priority">{job.priority}<br></br></PrioritySpan>
+                <span id="tileCompany">{job.company} <br></br></span>
+                <span id="tileTile">{job.title} <br></br></span>
+                <span id="tileApplied">{job.dateApplied}</span>
+                </button>
+                <br></br>
+                <br></br>
             </li>
         )
     })
 
     return(
         <div>
-            <div className='header'>
-                <h2>jobs cards</h2>
-            </div>
+            
             <ul className='list'>
                 {renderedJobs}
             </ul>
-            <JobDetail />
         </div>
     )
 }
