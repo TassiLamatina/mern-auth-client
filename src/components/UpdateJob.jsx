@@ -53,7 +53,7 @@ export default function UpdateJob(props) {
                     <option>To Apply</option>
                     <option>Interviewed</option>
                     <option>Rejected</option>
-                </Form.Control>
+                </Form.Control> 
             </Form.Group>
             <div className="create-btn">
                 <Button id="updateCard" variant="secondary" onClick={() => props.handleJobUpdate()}>Update Card</Button>
