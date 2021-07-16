@@ -1,3 +1,5 @@
+// Deprecated
+
 import { useState } from 'react'
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
@@ -75,9 +77,6 @@ export default function Login(props) {
           onChange={e => setPassword(e.target.value)}
           value={password}
         />
-
-        {/* <input type="checkbox" value="lsRememberMe" id="rememberMe"> 
-         <label for="rememberMe">Remember me </label> */}
 
         <input 
           type='submit'

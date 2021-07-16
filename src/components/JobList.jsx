@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-
+// styling for priority coloring
 const PrioritySpan = styled.div`
-/* Adapt the colors based on primary prop */
 background-color: ${props => {
   if(props.priority === "High"){
     return "#F97272"
@@ -19,12 +18,9 @@ background-color: ${props => {
      }};
      box-shadow: 0px 12px 0px #FFFFFF;
      border-radius: 200.5381px;
-
 `;
 
 const JobList = (props) => {
-
-
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(

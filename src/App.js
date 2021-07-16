@@ -1,6 +1,5 @@
 import './App.css';
 import NewNavbar from './components/NewNavbar.jsx'
-import Login from './components/Login.jsx'
 import Register from './components/Register.jsx'
 import Profile from './components/Profile.jsx'
 import Welcome from './components/Welcome.jsx'
@@ -63,11 +62,6 @@ function App() {
           <Route 
             path="/register"
             render={ props => <Register {...props} currentUser={ currentUser } setCurrentUser={ setCurrentUser }/> }
-          />
-
-          <Route 
-            path="/login"
-            render={ props => <Login {...props} currentUser={ currentUser } setCurrentUser={ setCurrentUser }/> }
           />
 
           {/* conditionally render a redirect for auth locked routes */}
