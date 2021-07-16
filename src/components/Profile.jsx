@@ -15,7 +15,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 export default function Profile(props) {
     // state is information from the server
     const [message, setMessage] = useState('')
-    const [filter,setFilter] = useState('applied')
+    const [filter,setFilter] = useState(null)
     const [jobList,setJobList] = useState([])
     const [filteredJobList,setFilteredJobList] = useState([])
     const [selected,setSelected] = useState(null)
@@ -28,8 +28,8 @@ export default function Profile(props) {
     const [description,setDescription] = useState('')
     const [notes,setNotes] = useState('')
     const [dateApplied,setDateApplied] = useState('')
-    const [priority,setPriority] = useState('')
-    const [status,setStatus] = useState('')
+    const [priority,setPriority] = useState('High')
+    const [status,setStatus] = useState('Applied')
 
     // hit the auth locked route on the backend
     useEffect(() => {
@@ -79,9 +79,43 @@ export default function Profile(props) {
         setSelected(job)
     }
 
-    const handleJobCreate = () => {
+    const handleJobCreate = async () => {
 
-        console.log('TODO: create job')
+        // make job object
+        const newJob = {
+            title: title,
+            company: company,
+            description: description,
+            jobURL: jobURL,
+            notes: notes,
+            priority: priority,
+            status: status
+        }
+
+        // make post request
+        const token = localStorage.getItem('jwtToken')
+
+        // makeup the auth headers
+        const authHeaders = {
+            Authorization: token
+        }
+        // hit the auth locked endpoint
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: newJob}, { headers: authHeaders})
+
+        // add to state jobList
+        setJobList([...jobList, response.data.job])
+        // update filters and action
+        setAction('view')
+        let filteredJobs = []
+        if(filter) {
+            filteredJobs = jobList.filter(job => job.status === filter)
+            if(status === filter) filteredJobs.push(response.data.job)
+        } else {
+            filteredJobs = [...jobList, response.data.job]
+            console.log("not filtering")
+        }
+        console.log(filteredJobs)
+        setFilteredJobList(filteredJobs)
     }
 
     const handleJobUpdate = async () => {
@@ -100,12 +134,16 @@ export default function Profile(props) {
         const authHeaders = {
             Authorization: token
         }
-        console.log("AUTH HEADERS: \n", authHeaders)
         // hit the auth locked endpoint
         const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: selected }, { headers: authHeaders})
 
         setAction('view')
-        let filteredJobs = jobList.filter(job => job.status === filter)
+        let filteredJobs = []
+        if(filter) {
+            filteredJobs = jobList.filter(job => job.status === filter)
+        } else {
+            filteredJobs = jobList  
+        }
         setFilteredJobList(filteredJobs)
     }
 
@@ -116,7 +154,6 @@ export default function Profile(props) {
         const authHeaders = {
             Authorization: token
         }
-        console.log("AUTH HEADERS: \n", authHeaders)
         // hit the auth locked endpoint
         const response = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, { headers: authHeaders , data: {jobId: selected._id }})
 
@@ -127,14 +164,26 @@ export default function Profile(props) {
         setSelected(null)
 
         setAction('create')
-        let filteredJobs = jobList.filter(job => job.status === filter)
-        setFilteredJobList(filteredJobs)
-        
+        let filteredJobs = []
+        if(filter) {
+            filteredJobs = jobList.filter(job => job.status === filter)
+        } else {
+            filteredJobs = jobList
+        }
+        setFilteredJobList(filteredJobs)  
     }
 
     const showNewJobForm = () => {
         setAction('create')
         setSelected(null)
+        setCompany('')
+        setJobURL('')
+        setTitle('')
+        setDescription('')
+        setNotes('')
+        setDateApplied('')
+        setPriority('High')
+        setStatus('Applied')
     }
 
     const showUpdateJobForm = (job) => {
@@ -178,7 +227,20 @@ export default function Profile(props) {
         }
 
     } else {
-        selectedJobPane = <NewJob handleJobCreate={handleJobCreate} />
+        selectedJobPane = <NewJob
+         handleJobCreate={handleJobCreate} 
+         
+         job={ selected } 
+
+         company={company} setCompany={setCompany}
+         jobURL={jobURL} setJobURL={setJobURL}
+         title={title} setTitle={setTitle}
+         description={description} setDescription={setDescription}
+         notes={notes} setNotes={setNotes}
+         dateApplied={dateApplied} setDateApplied={setDateApplied}  
+         priority={priority} setPriority={setPriority}
+         status={status} setStatus={setStatus}
+         />
     }
     
     return(

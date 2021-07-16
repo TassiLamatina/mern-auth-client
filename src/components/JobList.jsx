@@ -5,13 +5,13 @@ const PrioritySpan = styled.div`
 /* Adapt the colors based on primary prop */
 background-color: ${props => {
   if(props.priority === "High"){
-    return "red"
+    return "#F97272"
   }
   else if(props.priority === "Medium"){
-     return "yellow"
+     return "#F9F372"
   }
      else if(props.priority === "Low"){
-     return "green"
+     return "#9DF972"
      }
      else{
        return "white"
