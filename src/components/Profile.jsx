@@ -247,7 +247,7 @@ export default function Profile(props) {
         <div id="profile">
         <div id="menubarLand">
             <Row>
-                <Col lg={3}>
+                <Col md={3}>
                     <div className="create-btn">
                         <Button id="createbtn" onClick={ showNewJobForm }>Create New Card</Button>
                     </div>
@@ -256,11 +256,11 @@ export default function Profile(props) {
                     </div>
                 </Col>
 
-               <Col lg={3} id="jobCards">
+               <Col md={3} id="jobCards">
                     <JobList jobData={filteredJobList} handleJobCardClick= { handleJobCardClick }/>
 
                 </Col>
-                <Col lg={5} id="jobDetail">
+                <Col md={5} id="jobDetail">
                     {selectedJobPane}
                 </Col>
             </Row>
