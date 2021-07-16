@@ -53,13 +53,13 @@ export default function Register(props) {
 if(props.currentUser) return <Redirect to='/profile' component={ Profile } currentUser={ props.currentUser} />
 
   return (
-    <div>
-      <div className="container-fluid"> 
-        <div className="row" style={{height: "900px"}}>
+      <div>
+        <div className="container-fluid"> 
+          <div className="row" style={{height: "900px"}}>
             <div className="col-xs-12 col-md-8 pb-5-xs splash text-center" style={ { backgroundImage: "url(/splash.jpg)",
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain'    
-            }}>
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'contain'    
+              }}>
             </div>
             <div className="col-xs-12 col-md-4 register-col">
               <p className="pt-4 px-3">REGISTER</p>
@@ -100,11 +100,10 @@ if(props.currentUser) return <Redirect to='/profile' component={ Profile } curre
               <Link to="/">
                 <p className="login pt-3 px-3 text-center">Or login here.</p>
               </Link>
-             
+            
             </div>
-        </div>
+          </div>
+      </div>
     </div>
-
-  </div>
   )
 }
