@@ -1,12 +1,6 @@
 import { Form, Button } from "react-bootstrap"
-// import axios from "axios"
-
-
 
 export default function NewJob(props) {
-
-    // TRACKING USER 
-    // redirect if there is no user in state
     return(
         <>
             <Form.Group controlId="exampleForm.ControlInput1" className="mb-2">
@@ -35,7 +29,7 @@ export default function NewJob(props) {
             </Form.Group>
 
             <div className="apply-date">
-                <label className="mb-2 px-1"id="calendar" for="start">Applied on:</label>
+                <label className="mb-2 px-1"id="calendar" htmlFor="start">Applied on:</label>
                 <input className="mb-2" type="date" id="start" name="trip-start"
                     value={props.dateApplied} onChange={(e) => props.setDateApplied(e.target.value)} 
                     min="2018-01-01" max="2035-12-31"/>  
@@ -63,7 +57,6 @@ export default function NewJob(props) {
             <div className="create-btn">
                 <Button id="createCard" onClick={() => props.handleJobCreate()}>Submit</Button>
             </div>
-            
         </>
     )
 }

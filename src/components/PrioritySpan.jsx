@@ -1,5 +1,5 @@
+// styling for priority color
 const prioritySpan = styled.span`
-  /* Adapt the colors based on primary prop */
   background-color: ${props => {
     if(props.priority === "high"){
       return "red"
@@ -14,12 +14,10 @@ const prioritySpan = styled.span`
          return "white"
        }
        }};
-  
 `;
 render(
   <div>
-    {/* <prioritySpan high>Normal</prioritySpan> */}
   </div>
-);
+)
 
 export default PrioritySpan

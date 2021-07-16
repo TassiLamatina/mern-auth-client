@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom'
 import{ Navbar, Col }from 'react-bootstrap'
 
-
-// require("react-bootstrap/lib/NavbarHeader")
-
 export default function NewNavbar(props) {
-
-    
-    // console.log(props.currentUser.name)
-    // console.log('the props of Navbar:', props)
     // if the user is logged in
     const loggedIn = (
         <>
@@ -19,7 +12,6 @@ export default function NewNavbar(props) {
             <Col xs={4} md={2} className="user-col">
                 <div className="user">              
                     <p>Hi {props.currentUser ? props.currentUser.name : ""}!</p>
-                    {/* {console.log(props.currentUser)} */}
                 </div>
                 <div className="icon"> 
                     <img className="img-fluid" src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png" alt="person-icon"/>

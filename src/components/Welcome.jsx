@@ -3,13 +3,8 @@ import axios from 'axios'
 import jwt from 'jsonwebtoken'
 import { Redirect, Link } from 'react-router-dom'
 
+import { useState } from 'react'
 
-import {
-    useState,
-    useEffect
-  } from 'react'
-
-  
 export default function Welcome(props) {
 
     // state for the controlled from  
@@ -21,16 +16,13 @@ export default function Welcome(props) {
     const handleSubmit = async (e) => {
         try {
           e.preventDefault()
-          // console.log('do axios call!')
           // post to the backend with axios
           const requestBody = {
             email: email,
             password: password
           }
-          // console.log('my server url:', process.env.REACT_APP_SERVER_URL)
           const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/login`, requestBody)
           
-          // console.log(response)
           // destructure the response
           const { token } = response.data
           
@@ -48,13 +40,12 @@ export default function Welcome(props) {
           if(err.response.status === 400) {
             setMessage(err.response.data.msg)
           } else  {
-            // console.dir(err)
+            console.dir(err)
           }
         }
       }
     
       if(props.currentUser) return <Redirect to='/profile' component={ Profile } currentUser={ props.currentUser } />
-      // console.log("hit me")
 
     return(
         <div className="container-fluid"> 
@@ -73,8 +64,8 @@ export default function Welcome(props) {
                         
                         <div className="mb-3 text-center">
                             <input id="passwordPad" onChange={e => setPassword(e.target.value) } className="form-control mb-4" value={password} type="password" name="password" placeholder="Password"/>
-                            <input type="checkbox" value="lsRememberMe" id="rememberMe"/> 
-                            <label for="rememberMe">Remember me </label><br></br><br></br>
+                            {/* <input type="checkbox" value="lsRememberMe" id="rememberMe"/> 
+                            <label for="rememberMe">Remember me </label><br></br><br></br> */}
                             <input className="sign-in-submit" type="submit"></input>                 
                         </div>
                     </form>
