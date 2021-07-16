@@ -74,10 +74,9 @@ export default function Profile(props) {
         setFilteredJobList(filteredJobs)
     }
 
-    const handleJobCardClick = (id) => {
+    const handleJobCardClick = (job) => {
         setAction('view')
-        setSelected(id)
-        console.log(id)
+        setSelected(job)
     }
 
     const handleJobCreate = () => {
@@ -85,34 +84,52 @@ export default function Profile(props) {
         console.log('TODO: create job')
     }
 
-    const handleJobUpdate = async (id) => {
+    const handleJobUpdate = async () => {
 
-        let updatedJob = {
-            id: id,
-            title: title,
-            company: company,
-            jobURL: jobURL,
-            description: description,
-            notes: notes,
-            dateApplied: dateApplied,
-            priority: priority,
-            status: status,
-        }
+        selected.title = title
+        selected.company = company
+        selected.description = description
+        selected.jobURL = jobURL
+        selected.notes = notes
+        selected.priority = priority
+        selected.status = status
+
         const token = localStorage.getItem('jwtToken')
 
         // makeup the auth headers
         const authHeaders = {
             Authorization: token
         }
-
+        console.log("AUTH HEADERS: \n", authHeaders)
         // hit the auth locked endpoint
-        const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: updatedJob }, { headers: authHeaders})
+        const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: selected }, { headers: authHeaders})
 
-        console.log(`TODO: update ${id}`)
+        setAction('view')
+        let filteredJobs = jobList.filter(job => job.status === filter)
+        setFilteredJobList(filteredJobs)
     }
 
-    const handleJobDelete = (id) => {
-        console.log(`TODO: delete ${id}`)
+    const handleJobDelete = async () => {
+        const token = localStorage.getItem('jwtToken')
+
+        // makeup the auth headers
+        const authHeaders = {
+            Authorization: token
+        }
+        console.log("AUTH HEADERS: \n", authHeaders)
+        // hit the auth locked endpoint
+        const response = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, { headers: authHeaders , data: {jobId: selected._id }})
+
+        // remove job in state
+        let i = jobList.findIndex(job => job._id === selected._id)
+        jobList.splice(i, 1)
+        
+        setSelected(null)
+
+        setAction('create')
+        let filteredJobs = jobList.filter(job => job.status === filter)
+        setFilteredJobList(filteredJobs)
+        
     }
 
     const showNewJobForm = () => {
@@ -141,9 +158,7 @@ export default function Profile(props) {
 
     if(selected) {
         if(action === 'view'){
-            console.log(selected)
-            console.log(filteredJobList)
-            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ filteredJobList.find( job => job._id === selected) }/>
+            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ selected }/>
         } else if(action === 'update') {
             selectedJobPane = <UpdateJob 
             handleJobUpdate={handleJobUpdate}
