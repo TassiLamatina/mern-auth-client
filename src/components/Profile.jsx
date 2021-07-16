@@ -10,13 +10,14 @@ import UpdateJob from './UpdateJob'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 // bring in mock job data -- to be replaced with db later
-import jobData from '../jobData'
+// import jobData from '../jobData'
 
 export default function Profile(props) {
     // state is information from the server
     const [message, setMessage] = useState('')
     const [filter,setFilter] = useState('applied')
-    const [jobList,setJobList] = useState(jobData)
+    const [jobList,setJobList] = useState([])
+    const [filteredJobList,setFilteredJobList] = useState([])
     const [selected,setSelected] = useState(null)
     const [action,setAction] = useState('view')
 
@@ -43,9 +44,11 @@ export default function Profile(props) {
                 }
 
                 // hit the auth locked endpoint
-                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/auth-locked`, { headers: authHeaders })
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, { headers: authHeaders })
                 // set state with the data from the server
-                setMessage(response.data.msg)
+                setJobList(response.data.jobs)
+                setFilteredJobList(response.data.jobs)
+                console.log(jobList)
             } catch (err) {
                 console.log(err)
                 //log the user out if an error occurs
@@ -67,20 +70,44 @@ export default function Profile(props) {
 
         setFilter(filter)
         setAction('view')
-        let filteredJobs = jobData.filter(job => job.status === filter)
-        setJobList(filteredJobs)
+        let filteredJobs = jobList.filter(job => job.status === filter)
+        setFilteredJobList(filteredJobs)
     }
 
     const handleJobCardClick = (id) => {
         setAction('view')
         setSelected(id)
+        console.log(id)
     }
 
     const handleJobCreate = () => {
+
         console.log('TODO: create job')
     }
 
-    const handleJobUpdate = (id) => {
+    const handleJobUpdate = async (id) => {
+
+        let updatedJob = {
+            id: id,
+            title: title,
+            company: company,
+            jobURL: jobURL,
+            description: description,
+            notes: notes,
+            dateApplied: dateApplied,
+            priority: priority,
+            status: status,
+        }
+        const token = localStorage.getItem('jwtToken')
+
+        // makeup the auth headers
+        const authHeaders = {
+            Authorization: token
+        }
+
+        // hit the auth locked endpoint
+        const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: updatedJob }, { headers: authHeaders})
+
         console.log(`TODO: update ${id}`)
     }
 
@@ -114,7 +141,9 @@ export default function Profile(props) {
 
     if(selected) {
         if(action === 'view'){
-            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ jobList.find( job => job.id === selected) }/>
+            console.log(selected)
+            console.log(filteredJobList)
+            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ filteredJobList.find( job => job._id === selected) }/>
         } else if(action === 'update') {
             selectedJobPane = <UpdateJob 
             handleJobUpdate={handleJobUpdate}
@@ -150,8 +179,10 @@ export default function Profile(props) {
                     </div>
                 </Col>
 
-                <Col sm={12} md={4} id="jobCards">
-                    <JobList jobData={jobList} handleJobCardClick= { handleJobCardClick }/>
+
+               <Col sm={12} md={4} id="profileBody">
+                    <JobList jobData={filteredJobList} handleJobCardClick= { handleJobCardClick }/>
+
                 </Col>
                 <Col xs={12} md={5} id="jobDetail">
                     {selectedJobPane}
