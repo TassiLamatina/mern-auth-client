@@ -19,7 +19,7 @@ export default function NewNavbar(props) {
             <Col xs={4} md={2} className="user-col">
                 <div className="user">              
                     <p>Hi {props.currentUser ? props.currentUser.name : ""}!</p>
-                    {console.log(props.currentUser)}
+                    {/* {console.log(props.currentUser)} */}
                 </div>
                 <div className="icon"> 
                     <img className="img-fluid" src="https://img.icons8.com/material-outlined/48/000000/user-male-circle.png" alt="person-icon"/>

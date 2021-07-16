@@ -65,12 +65,7 @@ export default function Login(props) {
           onChange={e => setEmail(e.target.value)}
           value={email}
         />
-
-        <label>Remember Me</label>
         
-          <input name="rememberMe" checked={rememberMe} onChange={handleSubmit} type="checkbox"/>
-        
-
         <label htmlFor={'password-input'}>password:</label>
 
         <input    
@@ -80,6 +75,9 @@ export default function Login(props) {
           onChange={e => setPassword(e.target.value)}
           value={password}
         />
+
+        {/* <input type="checkbox" value="lsRememberMe" id="rememberMe"> 
+         <label for="rememberMe">Remember me </label> */}
 
         <input 
           type='submit'
