@@ -5,7 +5,7 @@ Clambr was a joint creation made to help you simplyfy your job hunt.
 Has your job search become tricky because you can't remember all the jobs you've applied to?
 This is exactly why we have created Clambr. With our app you can record and keep track of all the jobs you are interested in with specifiic information to help you ace your interview stage. 
 
-We used a combination of React, Javascript, bootstrap, MongoDB, Express RESTful routes, axios, jsonWebtoken, DOM manipulation and Styled Components. (If you plan on cloning our App please do not forget to "**npm i**" inside your terminal to get all of our dependencies up and running.)
+We used a combination of React, Javascript, bootstrap, MongoDB, Express RESTful routes, axios, jsonWebtoken, DOM manipulation, Styled Components, Asana, Figma and Zeplin. (If you plan on cloning our App please do not forget to "**npm i**" inside your terminal to get all of our dependencies up and running.)
 
 We were able to come to a compromise pretty quickly on our theme since we're all going to be joining the job-search field in a couple of weeks. Our main goal was to create something extremely simple that could assist absolutely anyone in tracking/logging all of the jobs they're interested in. After pitching our ideas to the UX team we were able to come up with the entire layout and all functionalities very quickly. Everyone was thinking along the same lines and the whole project came together in a snap. 
 
