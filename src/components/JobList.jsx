@@ -27,8 +27,8 @@ const JobList = (props) => {
     // render each job from JobList.js
     const renderedJobs = props.jobData.map(job => {
         return(
-            <li key={`${job.id}`}>
-                <button id="jobtiles" onClick={() => props.handleJobCardClick(job.id)}> 
+            <li key={`${job._id}`}>
+                <button id="jobtiles" onClick={() => props.handleJobCardClick(job._id)}> 
                 <PrioritySpan priority={`${job.priority}`} id="priority">{job.priority}<br></br></PrioritySpan>
                 <span id="tileCompany">{job.company} <br></br></span>
                 <span id="tileTile">{job.title} <br></br></span>
