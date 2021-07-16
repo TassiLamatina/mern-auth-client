@@ -18,7 +18,7 @@ background-color: ${props => {
      }
      }};
      box-shadow: 0px 12px 0px #FFFFFF;
-     border-radius: 7.5381px;
+     border-radius: 200.5381px;
 
 `;
 

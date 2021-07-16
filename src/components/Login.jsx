@@ -6,8 +6,9 @@ import Profile from './Profile'
 
 export default function Login(props) {
   // state for the controlled from  
-  const [email, setEmail] = useState('')
+  const [email, setEmail, rememberMe] = useState('')
   const [password, setPassword] = useState('')
+  // const [ email, rememberMe ] = useState('')
   // state for flash message from the server
   const [message, setMessage] = useState('')
 
@@ -29,6 +30,8 @@ export default function Login(props) {
       
       // save the response to localstorage
       localStorage.setItem('jwtToken', token)
+      localStorage.setItem('rememberMe', 'rememberMe')
+      localStorage.setItem('email', rememberMe ? email : '')
 
       // decode the jwt token before we put it in state
       const decoded = jwt.decode(token)
@@ -63,9 +66,14 @@ export default function Login(props) {
           value={email}
         />
 
+        <label>Remember Me</label>
+        
+          <input name="rememberMe" checked={rememberMe} onChange={handleSubmit} type="checkbox"/>
+        
+
         <label htmlFor={'password-input'}>password:</label>
 
-        <input 
+        <input    
           id='password-input'
           type='password'
           placeholder='password'
