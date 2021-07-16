@@ -15,7 +15,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 export default function Profile(props) {
     // state is information from the server
     const [message, setMessage] = useState('')
-    const [filter,setFilter] = useState('applied')
+    const [filter,setFilter] = useState(null)
     const [jobList,setJobList] = useState([])
     const [filteredJobList,setFilteredJobList] = useState([])
     const [selected,setSelected] = useState(null)
@@ -28,8 +28,8 @@ export default function Profile(props) {
     const [description,setDescription] = useState('')
     const [notes,setNotes] = useState('')
     const [dateApplied,setDateApplied] = useState('')
-    const [priority,setPriority] = useState('')
-    const [status,setStatus] = useState('')
+    const [priority,setPriority] = useState('High')
+    const [status,setStatus] = useState('Applied')
 
     // hit the auth locked route on the backend
     useEffect(() => {
@@ -74,50 +74,116 @@ export default function Profile(props) {
         setFilteredJobList(filteredJobs)
     }
 
-    const handleJobCardClick = (id) => {
+    const handleJobCardClick = (job) => {
         setAction('view')
-        setSelected(id)
-        console.log(id)
+        setSelected(job)
     }
 
-    const handleJobCreate = () => {
+    const handleJobCreate = async () => {
 
-        console.log('TODO: create job')
-    }
-
-    const handleJobUpdate = async (id) => {
-
-        let updatedJob = {
-            id: id,
+        // make job object
+        const newJob = {
             title: title,
             company: company,
-            jobURL: jobURL,
             description: description,
+            jobURL: jobURL,
             notes: notes,
-            dateApplied: dateApplied,
             priority: priority,
-            status: status,
+            status: status
         }
+
+        // make post request
         const token = localStorage.getItem('jwtToken')
 
         // makeup the auth headers
         const authHeaders = {
             Authorization: token
         }
-
         // hit the auth locked endpoint
-        const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: updatedJob }, { headers: authHeaders})
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: newJob}, { headers: authHeaders})
 
-        console.log(`TODO: update ${id}`)
+        // add to state jobList
+        setJobList([...jobList, response.data.job])
+        // update filters and action
+        setAction('view')
+        let filteredJobs = []
+        if(filter) {
+            filteredJobs = jobList.filter(job => job.status === filter)
+            if(status === filter) filteredJobs.push(response.data.job)
+        } else {
+            filteredJobs = [...jobList, response.data.job]
+            console.log("not filtering")
+        }
+        console.log(filteredJobs)
+        setFilteredJobList(filteredJobs)
     }
 
-    const handleJobDelete = (id) => {
-        console.log(`TODO: delete ${id}`)
+    const handleJobUpdate = async () => {
+
+        selected.title = title
+        selected.company = company
+        selected.description = description
+        selected.jobURL = jobURL
+        selected.notes = notes
+        selected.priority = priority
+        selected.status = status
+
+        const token = localStorage.getItem('jwtToken')
+
+        // makeup the auth headers
+        const authHeaders = {
+            Authorization: token
+        }
+        // hit the auth locked endpoint
+        const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, {job: selected }, { headers: authHeaders})
+
+        setAction('view')
+        let filteredJobs = []
+        if(filter) {
+            filteredJobs = jobList.filter(job => job.status === filter)
+        } else {
+            filteredJobs = jobList  
+        }
+        setFilteredJobList(filteredJobs)
+    }
+
+    const handleJobDelete = async () => {
+        const token = localStorage.getItem('jwtToken')
+
+        // makeup the auth headers
+        const authHeaders = {
+            Authorization: token
+        }
+        // hit the auth locked endpoint
+        const response = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/jobs`, { headers: authHeaders , data: {jobId: selected._id }})
+
+        // remove job in state
+        let i = jobList.findIndex(job => job._id === selected._id)
+        jobList.splice(i, 1)
+        
+        setSelected(null)
+
+        setAction('create')
+        let filteredJobs = []
+        if(filter) {
+            filteredJobs = jobList.filter(job => job.status === filter)
+        } else {
+            filteredJobs = jobList
+        }
+        setFilteredJobList(filteredJobs)  
     }
 
     const showNewJobForm = () => {
         setAction('create')
         setSelected(null)
+        setCompany('')
+        setJobURL('')
+        setTitle('')
+        setDescription('')
+        setNotes('')
+        setDateApplied('')
+        setPriority('High')
+        setStatus('Applied')
     }
 
     const showUpdateJobForm = (job) => {
@@ -141,9 +207,7 @@ export default function Profile(props) {
 
     if(selected) {
         if(action === 'view'){
-            console.log(selected)
-            console.log(filteredJobList)
-            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ filteredJobList.find( job => job._id === selected) }/>
+            selectedJobPane = <JobDetail showUpdateJobForm={showUpdateJobForm} job={ selected }/>
         } else if(action === 'update') {
             selectedJobPane = <UpdateJob 
             handleJobUpdate={handleJobUpdate}
@@ -163,7 +227,20 @@ export default function Profile(props) {
         }
 
     } else {
-        selectedJobPane = <NewJob handleJobCreate={handleJobCreate} />
+        selectedJobPane = <NewJob
+         handleJobCreate={handleJobCreate} 
+         
+         job={ selected } 
+
+         company={company} setCompany={setCompany}
+         jobURL={jobURL} setJobURL={setJobURL}
+         title={title} setTitle={setTitle}
+         description={description} setDescription={setDescription}
+         notes={notes} setNotes={setNotes}
+         dateApplied={dateApplied} setDateApplied={setDateApplied}  
+         priority={priority} setPriority={setPriority}
+         status={status} setStatus={setStatus}
+         />
     }
     
     return(

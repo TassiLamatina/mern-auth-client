@@ -5,13 +5,13 @@ const PrioritySpan = styled.div`
 /* Adapt the colors based on primary prop */
 background-color: ${props => {
   if(props.priority === "High"){
-    return "red"
+    return "#F97272"
   }
   else if(props.priority === "Medium"){
-     return "yellow"
+     return "#F9F372"
   }
      else if(props.priority === "Low"){
-     return "green"
+     return "#9DF972"
      }
      else{
        return "white"
@@ -29,7 +29,7 @@ const JobList = (props) => {
     const renderedJobs = props.jobData.map(job => {
         return(
             <li key={`${job._id}`}>
-                <button id="jobtiles" onClick={() => props.handleJobCardClick(job._id)}> 
+                <button id="jobtiles" onClick={() => props.handleJobCardClick(job)}> 
                 <PrioritySpan priority={`${job.priority}`} id="priority">{job.priority}<br></br></PrioritySpan>
                 <span id="tileCompany">{job.company} <br></br></span>
                 <span id="tileTile">{job.title} <br></br></span>
