@@ -34,6 +34,7 @@ Our only unresolved issues as of now are our stretch goals.
 <br>
 <br>
 The strech goals are:
+
 1. OAuth
 2. Remember Me checkbox connected to local storage
 3. Sort button Filter for job cards
@@ -45,3 +46,8 @@ The strech goals are:
 
 ![Clambr](public/ClambrHome.png)
 ![Clambr](public/ClambrAction.png)
+<br>
+<br>
+<br>
+**Live Link**
+https://clambr.netlify.app/
