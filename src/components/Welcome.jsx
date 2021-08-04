@@ -59,7 +59,7 @@ export default function Welcome(props) {
                     <form onSubmit={handleSubmit} id="sign-in">
                         <div className="pt-5 mb-3">
                             <label className="form-label">SIGN IN:</label>
-                            <input onChange={e => setEmail(e.target.value) } className="form-control" value={email} type="text" name="username" placeholder="Username or email"/>
+                            <input onChange={e => setEmail(e.target.value) } className="form-control" value={email} type="text" name="username" placeholder="Email address"/>
                         </div>
                         
                         <div className="mb-3 text-center">
